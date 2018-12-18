@@ -7,4 +7,4 @@ To use eventnet, download the file <a href="eventnet-0.4.jar">eventnet-0.4.jar</
 Eventnet is written in java and should run on any computer on which the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 or higher, is installed.
 
 ## First steps and tutorial 
-Tutorials on how to use eventnet and other information is in the [eventnet wiki](wiki).
+Tutorials on how to use eventnet and other information is in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
