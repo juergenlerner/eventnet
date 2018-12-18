@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="human.migration" version="0.3">
+  <input.files accept=".csv" has.header="true" delimiter="SEMICOLON" quote.char="DOUBLEQUOTE">
+    <input.directory name="C:\juergen\projects\wiki\data\human_migration"/>
+    <file name="human_migration_events.csv"/>
+  </input.files>
+  <output.directory name="C:\juergen\projects\wiki\data\human_migration\output"/>
+  <event.components>
+    <component name="SOURCE" column.name="user"/>
+    <component name="TARGET" column.name="article"/>
+    <component name="TIME" column.name="time"/>
+    <component name="TYPE" column.name="type"/>
+  </event.components>
+  <network.mode is.multimode="true" number.of.modes="2">
+    <node.set index="0" name="users"/>
+    <node.set index="1" name="articles"/>
+  </network.mode>
+  <event.types>
+    <type name="edit" implied="false" admits.loops="false" source.node.set="users" target.node.set="articles"/>
+    <type name="talk" implied="false" admits.loops="false" source.node.set="users" target.node.set="articles"/>
+  </event.types>
+  <time time.format.type="INTEGER" interval.type="TIME" time.unit="86400000"/>
+  <attribute name="last event time in network" class="NETWORK_LEVEL" type="DEFAULT_NETWORK_LEVEL_ATTRIBUTE" description="time of last event in network">
+    <attr.update type="SET_VALUE_TO"/>
+    <time.response time.scale.type="TIME"/>
+  </attribute>
+  <attribute name="edit popularity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="indegree edit events">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="edit" direction="IN"/>
+  </attribute>
+  <attribute name="talk popularity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="indegree talk events">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="talk" direction="IN"/>
+  </attribute>
+  <attribute name="edit activity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="outdegree edit events">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="edit" direction="OUT"/>
+  </attribute>
+  <attribute name="talk activity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="outdegree talk events">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="talk" direction="OUT"/>
+  </attribute>
+  <attribute name="edit" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="number of past edit events">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="edit"/>
+  </attribute>
+  <attribute name="talk" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="number of past talk events">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="talk"/>
+  </attribute>
+  <statistic name="repetition_edit" type="DYAD_STATISTIC" description="edits events on same dyad" dyad.attr.name.1="edit" direction.1="OUT">
+    <function type="LOG1P" parameter="1.0"/>
+  </statistic>
+  <statistic name="repetition_talk" type="DYAD_STATISTIC" description="talk events on same dyad" dyad.attr.name.1="talk" direction.1="OUT">
+    <function type="LOG1P" parameter="1.0"/>
+  </statistic>
+  <statistic name="edit_activity" type="NODE_STATISTIC" description="edit outdegree of user" node.attr.name.1="edit activity" endpoint="SOURCE">
+    <function type="LOG1P" parameter="1.0"/>
+  </statistic>
+  <statistic name="talk_activity" type="NODE_STATISTIC" description="talk outdegree of user" node.attr.name.1="talk activity" endpoint="SOURCE">
+    <function type="LOG1P" parameter="1.0"/>
+  </statistic>
+  <statistic name="edit_popularity" type="NODE_STATISTIC" description="edit indegree of article" node.attr.name.1="edit popularity" endpoint="TARGET">
+    <function type="LOG1P" parameter="1.0"/>
+  </statistic>
+  <statistic name="talk_popularity" type="NODE_STATISTIC" description="talk indegree of article" node.attr.name.1="talk popularity" endpoint="TARGET">
+    <function type="LOG1P" parameter="1.0"/>
+  </statistic>
+  <statistic name="last_network_time" type="NETWORK_STATISTIC" description="time of last event in whole network" network.attr.name.1="last event time in network"/>
+  <statistic name="edit_4_cycle" type="FOUR_CYCLE_STATISTIC" description="source and target connected via 3 edit ties over two different nodes" dyad.attr.name.1="edit" direction.1="SYM" dyad.attr.name.2="edit" direction.2="SYM" dyad.attr.name.3="edit" direction.3="SYM">
+    <function type="LOG1P" parameter="1.0"/>
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <statistic name="talk_4_cycle" type="FOUR_CYCLE_STATISTIC" description="source and target connected via 3 talk ties over two different nodes" dyad.attr.name.1="talk" direction.1="SYM" dyad.attr.name.2="talk" direction.2="SYM" dyad.attr.name.3="talk" direction.3="SYM">
+    <function type="LOG1P" parameter="1.0"/>
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <observation name="EDIT" type="DEFAULT_DYADIC_OBSERVATION" description="edit events" event.type="edit" apply.case.control.sampling="true" number.of.non.events="5" source.node.set="users" target.node.set="articles"/>
+  <observation name="TALK" type="DEFAULT_DYADIC_OBSERVATION" description="talk events" event.type="talk" apply.case.control.sampling="true" number.of.non.events="5" source.node.set="users" target.node.set="articles"/>
+  <observation name="CONDITIONAL_TYPE" type="DEFAULT_DYADIC_OBSERVATION" description="events of any type conditional on observed events" condition.on.source="true" condition.on.target="true"/>
+</eventnet.configuration>
