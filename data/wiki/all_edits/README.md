@@ -1,0 +1,1 @@
+This directory contains files to analyze event networks from all edit events in the English-language version of Wikipedia as described in the [tutorial on analyzing large event networks](https://github.com/juergenlerner/eventnet/wiki/Large-event-networks-(tutorial)).
