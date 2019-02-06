@@ -15,7 +15,7 @@ Tutorials on how to use eventnet are in the [eventnet wiki](https://github.com/j
 
 
 ## Contact
-Address questions, comments, bug reports, or feature requests to [J&uuml;rgen Lerner](https://github.com/juergenlerner).
+[J&uuml;rgen Lerner](https://github.com/juergenlerner).
 
 ## Funding
 We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Grant No. **LE 2237/2-1**.
