@@ -8,10 +8,12 @@ Eventnet is written in java and should run on any computer on which the <a href=
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
-**Source code** (```.java``` files) are in the file [eventnet-0.4-src.jar](https://github.com/juergenlerner/eventnet/raw/master/eventnet-0.4-src.jar).
+**Source code** (```.java``` files) are in [eventnet-0.4-src.jar](https://github.com/juergenlerner/eventnet/raw/master/eventnet-0.4-src.jar).
 
 ## First steps and tutorial 
 Tutorials on how to use eventnet are in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
+
+A **training workshop** introducing eventnet will be held at the Sunbelt Social Networks Conference in Montreal, Canada on June 19, 2019 ([http://sunbelt2019.ca](http://sunbelt2019.ca)).
 
 
 ## Contact
