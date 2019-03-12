@@ -15,8 +15,9 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 ## Tutorials and training 
 Tutorials on how to use eventnet are in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
 
-A **training workshop** introducing eventnet will be held at the Sunbelt Social Networks Conference in Montreal, Canada on June 19, 2019 ([http://sunbelt2019.ca](http://sunbelt2019.ca)).
-
+**Training workshops** introducing eventnet are offered at the following conferences or summerschools.
+* Sunbelt Social Networks Conference, Montreal, Canada on June 19, 2019 ([http://sunbelt2019.ca](http://sunbelt2019.ca)).
+* European Conference on Social Networks, Zurich, Switzerland on September 12, 2019 ([https://www.eusn2019.ethz.ch/](https://www.eusn2019.ethz.ch/)).
 
 ## Contact
 [J&uuml;rgen Lerner](https://github.com/juergenlerner).
