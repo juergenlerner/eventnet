@@ -17,7 +17,7 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 
 **Training workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 * [Polnet Summer-Academy](https://www.polver.uni-konstanz.de/materiellestaatstheorie/polnet/programm/sommerakademie-2019/), Konstanz, Germany. May 24, 2019.
-* ["Relational event models for the analysis of social networks,"](http://business-school.exeter.ac.uk/research/centres/rmc/events/relationaleventmodels/) University of Exeter, Business School. 3-4, June, 2019.
+* [Relational event models for the analysis of social networks,](http://business-school.exeter.ac.uk/research/centres/rmc/events/relationaleventmodels/) University of Exeter, Business School. 3-4, June, 2019.
 * [Sunbelt Social Networks Conference](http://sunbelt2019.ca), Montreal, Canada. June 19, 2019.
 * [European Conference on Social Networks](https://www.eusn2019.ethz.ch/), Zurich, Switzerland. September 12, 2019.
 
