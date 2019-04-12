@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <eventnet.configuration name="gulf.config" version="0.5">
   <input.files accept=".csv" has.header="true" delimiter="SEMICOLON" quote.char="DOUBLEQUOTE">
-    <input.directory name="C:\juergen\projects\elyzer\elyzer_projects\international_relations"/>
+    <input.directory name="."/>
     <file name="gulf_events.csv"/>
   </input.files>
-  <output.directory name="C:\juergen\projects\elyzer\elyzer_projects\international_relations\output"/>
+  <output.directory name="./output"/>
   <event.components>
     <component name="SOURCE" column.name="Source"/>
     <component name="TARGET" column.name="Target"/>
