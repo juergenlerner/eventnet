@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="gulf.config" version="0.5">
+  <input.files accept=".csv" has.header="true" delimiter="SEMICOLON" quote.char="DOUBLEQUOTE">
+    <input.directory name="C:\juergen\projects\elyzer\elyzer_projects\international_relations"/>
+    <file name="gulf_events.csv"/>
+  </input.files>
+  <output.directory name="C:\juergen\projects\elyzer\elyzer_projects\international_relations\output"/>
+  <event.components>
+    <component name="SOURCE" column.name="Source"/>
+    <component name="TARGET" column.name="Target"/>
+    <component name="TIME" column.name="Time"/>
+    <component name="TYPE" column.name="Type"/>
+    <component name="WEIGHT" column.name="Weight"/>
+  </event.components>
+  <network.mode is.multimode="false"/>
+  <event.types>
+    <type name="set.logCapRat" implied="false" admits.loops="false"/>
+    <type name="set.majPow" implied="false" admits.loops="false"/>
+    <type name="set.contig" implied="false" admits.loops="false"/>
+    <type name="set.logTrade" implied="false" admits.loops="false"/>
+    <type name="set.logDist" implied="false" admits.loops="false"/>
+    <type name="set.polityWeakLink" implied="false" admits.loops="false"/>
+    <type name="set.logJointIGO" implied="false" admits.loops="false"/>
+    <type name="set.allies" implied="false" admits.loops="false"/>
+    <type name="cooperation" implied="false" admits.loops="false"/>
+    <type name="conflict" implied="false" admits.loops="false"/>
+  </event.types>
+  <time time.format.type="DATE_TIME" interval.type="TIME" time.unit="1" calendar.time.unit="DAY" date.format.pattern="yyMMdd"/>
+  <attribute name="conflict" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="sum of absolute value of weigths of conflictive events">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.01"/>
+    <event.response event.type="conflict">
+      <function type="ABS"/>
+    </event.response>
+  </attribute>
+  <attribute name="cooperation" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="sum of weigths of cooperative events">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.01"/>
+    <event.response event.type="cooperation"/>
+  </attribute>
+  <attribute name="pos.outdeg" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="sum of weights of outgoing cooperative events">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.01"/>
+    <event.response event.type="cooperation" direction="OUT"/>
+  </attribute>
+  <attribute name="pos.indeg" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="sum of weights of incomming cooperative events">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.01"/>
+    <event.response event.type="cooperation" direction="IN"/>
+  </attribute>
+  <attribute name="neg.outdeg" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="sum of absolute value of weights of outgoing conflictive events">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.01"/>
+    <event.response event.type="conflict" direction="OUT">
+      <function type="ABS"/>
+    </event.response>
+  </attribute>
+  <attribute name="neg.indeg" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="sum of absolute value of weights of incomming conflictive events">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.01"/>
+    <event.response event.type="conflict" direction="IN">
+      <function type="ABS"/>
+    </event.response>
+  </attribute>
+  <attribute name="logCapRat" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.logCapRat"/>
+  </attribute>
+  <attribute name="majPow" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.majPow"/>
+  </attribute>
+  <attribute name="contiguity" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.contig"/>
+  </attribute>
+  <attribute name="logTrade" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.logTrade"/>
+  </attribute>
+  <attribute name="logDistance" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.logDist"/>
+  </attribute>
+  <attribute name="polityWeakLink" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.polityWeakLink"/>
+  </attribute>
+  <attribute name="logJointIGO" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.logJointIGO"/>
+  </attribute>
+  <attribute name="allies" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="set.allies"/>
+  </attribute>
+  <statistic name="pos.repetition" type="DYAD_STATISTIC" dyad.attr.name.1="cooperation" direction.1="OUT"/>
+  <statistic name="neg.reciprocation" type="DYAD_STATISTIC" dyad.attr.name.1="conflict" direction.1="IN"/>
+  <statistic name="pos.reciprocation" type="DYAD_STATISTIC" dyad.attr.name.1="cooperation" direction.1="IN"/>
+  <statistic name="neg.repetition" type="DYAD_STATISTIC" dyad.attr.name.1="conflict" direction.1="OUT"/>
+  <statistic name="pos.outdeg.source" type="NODE_STATISTIC" node.attr.name.1="pos.outdeg" endpoint="SOURCE"/>
+  <statistic name="neg.outdeg.source" type="NODE_STATISTIC" node.attr.name.1="neg.outdeg" endpoint="SOURCE"/>
+  <statistic name="pos.indeg.source" type="NODE_STATISTIC" node.attr.name.1="pos.indeg" endpoint="SOURCE"/>
+  <statistic name="neg.indeg.source" type="NODE_STATISTIC" node.attr.name.1="neg.indeg" endpoint="SOURCE"/>
+  <statistic name="pos.outdeg.target" type="NODE_STATISTIC" node.attr.name.1="pos.outdeg" endpoint="TARGET"/>
+  <statistic name="neg.outdeg.target" type="NODE_STATISTIC" node.attr.name.1="neg.outdeg" endpoint="TARGET"/>
+  <statistic name="pos.indeg.target" type="NODE_STATISTIC" node.attr.name.1="pos.indeg" endpoint="TARGET"/>
+  <statistic name="neg.indeg.target" type="NODE_STATISTIC" node.attr.name.1="neg.indeg" endpoint="TARGET"/>
+  <statistic name="friend.of.friend" type="TRIANGLE_STATISTIC" dyad.attr.name.1="cooperation" direction.1="SYM" dyad.attr.name.2="cooperation" direction.2="SYM">
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <statistic name="friend.of.enemy" type="TRIANGLE_STATISTIC" dyad.attr.name.1="conflict" direction.1="SYM" dyad.attr.name.2="cooperation" direction.2="SYM">
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <statistic name="enemy.of.friend" type="TRIANGLE_STATISTIC" dyad.attr.name.1="cooperation" direction.1="SYM" dyad.attr.name.2="conflict" direction.2="SYM">
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <statistic name="enemy.of.enemy" type="TRIANGLE_STATISTIC" dyad.attr.name.1="conflict" direction.1="SYM" dyad.attr.name.2="conflict" direction.2="SYM">
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <statistic name="logDistance" type="DYAD_STATISTIC" dyad.attr.name.1="logDistance" direction.1="SYM"/>
+  <statistic name="logCapRat" type="DYAD_STATISTIC" dyad.attr.name.1="logCapRat" direction.1="SYM"/>
+  <statistic name="majorPower" type="DYAD_STATISTIC" dyad.attr.name.1="majPow" direction.1="SYM"/>
+  <statistic name="contiguity" type="DYAD_STATISTIC" dyad.attr.name.1="contiguity" direction.1="SYM"/>
+  <statistic name="logTrade" type="DYAD_STATISTIC" dyad.attr.name.1="logTrade" direction.1="SYM"/>
+  <statistic name="polityWeakLink" type="DYAD_STATISTIC" dyad.attr.name.1="polityWeakLink" direction.1="SYM"/>
+  <statistic name="logJointIGO" type="DYAD_STATISTIC" dyad.attr.name.1="logJointIGO" direction.1="SYM"/>
+  <statistic name="allies" type="DYAD_STATISTIC" dyad.attr.name.1="allies" direction.1="SYM"/>
+  <statistic name="enemy.of.ally" type="TRIANGLE_STATISTIC" dyad.attr.name.1="allies" direction.1="SYM" dyad.attr.name.2="conflict" direction.2="SYM"/>
+  <statistic name="ally.of.enemy" type="TRIANGLE_STATISTIC" dyad.attr.name.1="conflict" direction.1="SYM" dyad.attr.name.2="allies" direction.2="SYM"/>
+  <observation name="CONFLICT" type="DEFAULT_DYADIC_OBSERVATION" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="2" non.events.are.per.observed.event="true">
+    <consider.event.type name="conflict"/>
+  </observation>
+  <observation name="COOPERATE" type="DEFAULT_DYADIC_OBSERVATION" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="2" non.events.are.per.observed.event="true">
+    <consider.event.type name="cooperation"/>
+  </observation>
+  <observation name="CONDITIONAL_WEIGHT" type="DEFAULT_DYADIC_OBSERVATION" exclude.loops="true" condition.on.source="true" condition.on.target="true">
+    <consider.event.type name="cooperation"/>
+    <consider.event.type name="conflict"/>
+  </observation>
+</eventnet.configuration>
