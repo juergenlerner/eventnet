@@ -20,9 +20,6 @@
     <type name="talk" implied="false" admits.loops="false" source.node.set="users" target.node.set="articles"/>
   </event.types>
   <time time.format.type="INTEGER" interval.type="TIME" time.unit="86400000"/>
-  <attribute name="last event time in network" class="NETWORK_LEVEL" type="DEFAULT_NETWORK_LEVEL_ATTRIBUTE" description="time of last event in network">
-    <attr.update type="SET_VALUE_TO"/>
-  </attribute>
   <attribute name="edit popularity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="indegree edit events">
     <attr.update type="INCREMENT_VALUE_BY"/>
     <event.response event.type="edit" direction="IN"/>
@@ -46,6 +43,11 @@
   <attribute name="talk" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="number of past talk events">
     <attr.update type="INCREMENT_VALUE_BY"/>
     <event.response event.type="talk"/>
+  </attribute>
+  <attribute name="last event time in network" class="NETWORK_LEVEL" type="DEFAULT_NETWORK_LEVEL_ATTRIBUTE" description="time of last event in network">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="edit" time.scale.type="TIME"/>
+    <event.response event.type="talk" time.scale.type="TIME"/>
   </attribute>
   <statistic name="repetition_edit" type="DYAD_STATISTIC" description="edits events on same dyad" dyad.attr.name.1="edit" direction.1="OUT">
     <function type="LOG1P"/>
