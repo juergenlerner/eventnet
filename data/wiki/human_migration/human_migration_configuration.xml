@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <eventnet.configuration name="human.migration" version="0.5">
   <input.files accept=".csv" has.header="true" delimiter="SEMICOLON" quote.char="DOUBLEQUOTE">
-    <input.directory name="C:\juergen\projects\elyzer\elyzer_projects\wiki_human_migration"/>
+    <input.directory name="."/>
     <file name="human_migration_events.csv"/>
   </input.files>
-  <output.directory name="C:\juergen\projects\elyzer\elyzer_projects\wiki_human_migration\output"/>
+  <output.directory name="./output"/>
   <event.components>
     <component name="SOURCE" column.name="user"/>
     <component name="TARGET" column.name="article"/>
