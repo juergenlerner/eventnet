@@ -6,7 +6,7 @@ To use eventnet, download the file [eventnet-0.5.1.jar](https://github.com/juerg
 
 Eventnet is written in java and should run on any computer on which the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 or higher, is installed.
 
-**Source code** (```.java``` files) are in [eventnet-0.5.1-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5-src.jar).
+**Source code** (```.java``` files) are in [eventnet-0.5.1-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.1-src.jar).
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
