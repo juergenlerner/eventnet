@@ -33,5 +33,5 @@
   <statistic name="4cycle" type="FOUR_CYCLE_STATISTIC" dyad.attr.name.1="edited" direction.1="SYM" dyad.attr.name.2="edited" direction.2="SYM" dyad.attr.name.3="edited" direction.3="SYM">
     <function.combine.serial type="MIN"/>
   </statistic>
-  <observation name="EDIT" type="DEFAULT_DYADIC_OBSERVATION" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="10" non.events.are.per.observed.event="true" source.node.set="users" target.node.set="articles"/>
+  <observation name="EDIT" type="DEFAULT_DYADIC_OBSERVATION" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="100" non.events.are.per.observed.event="true" source.node.set="users" target.node.set="articles"/>
 </eventnet.configuration>
