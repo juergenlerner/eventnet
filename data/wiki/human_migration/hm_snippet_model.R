@@ -9,39 +9,16 @@ setwd("<output directory of eventnet>")
 events <- read.csv("hm_events_snippet_EDIT.csv")
 summary(events)
 
+var.names <- names(events)
+var.names
+
+# scale (standardize) the explanatory variables (statistics)
+# this is not mandatory - but makes effect sizes better comparable
+events[,c(9:length(var.names))] <- scale(events[,c(9:length(var.names))])
+
 ## specify and estimate a Cox proportional hazard model
 my.surv <- Surv(time = rep(1,dim(events)[1]), event = events$IS_OBSERVED)
 my.model <- coxph(my.surv ~ repetition + X4cycle + activity*popularity
-                  + strata(TIME)
-                  , data = events)
-# print estimated parameters, standard errors, ...
-summary(my.model)
-
-####################################################
-# BECOME_ACTIVE
-events <- read.csv("hm_events_snippet_BECOME_ACTIVE.csv")
-summary(events)
-
-## specify and estimate a Cox proportional hazard model
-my.surv <- Surv(time = rep(1,dim(events)[1]), event = events$IS_OBSERVED)
-my.model <- coxph(my.surv ~ 
-                  user_activity 
-                  + strata(TIME)
-                  , data = events)
-# print estimated parameters, standard errors, ...
-summary(my.model)
-
-####################################################
-# CHOOSE_ARTICLE
-events <- read.csv("hm_events_snippet_CHOOSE_ARTICLE.csv")
-summary(events)
-
-## specify and estimate a Cox proportional hazard model
-my.surv <- Surv(time = rep(1,dim(events)[1]), event = events$IS_OBSERVED)
-my.model <- coxph(my.surv ~ repetition 
-                  + four_cycle
-                  + article_popularity
-                  + user_activity:article_popularity
                   + strata(TIME)
                   , data = events)
 # print estimated parameters, standard errors, ...
