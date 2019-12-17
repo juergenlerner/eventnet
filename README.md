@@ -10,7 +10,7 @@ Eventnet is written in java and should run on any computer on which the <a href=
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
-**Citation:** Lerner and Lomi (2019). **Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.** To appear in _Network Science_. Preprint available at [arXiv:1905.00630 [cs.SI]](https://arxiv.org/abs/1905.00630).
+**Citation:** Lerner and Lomi (2019). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) To appear in _Network Science_. ([DOI: https://doi.org/10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
 
 ## Tutorials and training 
 **Online tutorials** for eventnet are in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
