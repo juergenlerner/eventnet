@@ -22,7 +22,7 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 * [European Conference on Social Networks](https://www.eusn2019.ethz.ch/), Zurich, Switzerland. September 12, 2019.
 
 ## Contact
-[J&uuml;rgen Lerner](https://github.com/juergenlerner)
+[J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
 
 ## Funding
 We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Grant No. **LE 2237/2-1**.
