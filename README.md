@@ -25,6 +25,4 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 [J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
 
 ## Funding
-We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. 
-
-From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2024: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
+We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2024: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
