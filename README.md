@@ -34,4 +34,4 @@ We further illustrate how to [analyze large event networks](https://github.com/j
 [J&uuml;rgen Lerner](https://github.com/juergenlerner)
 
 ## Funding
-We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Grant No. **LE 2237/2-1**.
+We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2024: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
