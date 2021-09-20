@@ -10,12 +10,25 @@ Eventnet is written in java and should run on any computer on which the <a href=
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
-**Citation:** Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: https://doi.org/10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
+**Citation:** Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: 10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
+
+## eventnet.hyper (RHEM)
+Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is an extension of eventnet to events involving any number of actors or nodes, such as meetings, co-authoring, multi-cast communication, or citation networks. To use eventnet.hyper, download the file [eventnet.hyper-0.2.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.2.jar). See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
+
+**Source code** for eventnet.hyper is in [eventnet.hyper-0.2-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.2-src.jar).
+
+**License:** [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
+
+**Citation:** Lerner, Lomi, Mowbray, Rollings, and Tranmer (2021). [**Dynamic network analysis of contact diaries.**](https://doi.org/10.1016/j.socnet.2021.04.001) _Social Networks_, 66:224-236. ([DOI: 10.1016/j.socnet.2021.04.001](https://doi.org/10.1016/j.socnet.2021.04.001))
 
 ## Tutorials and training 
 **Online tutorials** for eventnet are in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
 
 **Training workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
+* [International "Winter Course," _Personal Networks: Theory, Methods and Applications_](https://grupsderecerca.uab.cat/egolab/node/354), Barcelona, Spain. February 7-11, 2022.
+
+**Past training events** 
+
 * [Polnet Summer-Academy](https://www.polver.uni-konstanz.de/materiellestaatstheorie/polnet/programm/sommerakademie-2019/), Konstanz, Germany. May 24, 2019.
 * [Relational event models for the analysis of social networks,](http://business-school.exeter.ac.uk/research/centres/rmc/events/relationaleventmodels/) University of Exeter, Business School. June 3-4, 2019.
 * [Sunbelt Social Networks Conference](http://sunbelt2019.ca), Montreal, Canada. June 19, 2019.
