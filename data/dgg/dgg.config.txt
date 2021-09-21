@@ -41,9 +41,9 @@
     <function.combine.parallel type="SUM"/>
     <function.combine.serial type="MIN"/>
   </statistic>
-  <statistic name="sub.rep.1" type="UNDIR_HYPEREDGE_SUB_REPETITION_STATISTIC_AVG" hyperedge.attr.name.1="prior.events" sub.hyperedge.size="1"/>
-  <statistic name="sub.rep.2" type="UNDIR_HYPEREDGE_SUB_REPETITION_STATISTIC_AVG" hyperedge.attr.name.1="prior.events" sub.hyperedge.size="2"/>
-  <statistic name="sub.rep.3" type="UNDIR_HYPEREDGE_SUB_REPETITION_STATISTIC_AVG" hyperedge.attr.name.1="prior.events" sub.hyperedge.size="3"/>
+  <statistic name="individual.activity" type="UNDIR_HYPEREDGE_SUB_REPETITION_STATISTIC_AVG" hyperedge.attr.name.1="prior.events" sub.hyperedge.size="1"/>
+  <statistic name="dyadic.shared.activity" type="UNDIR_HYPEREDGE_SUB_REPETITION_STATISTIC_AVG" hyperedge.attr.name.1="prior.events" sub.hyperedge.size="2"/>
+  <statistic name="triadic.shared.activity" type="UNDIR_HYPEREDGE_SUB_REPETITION_STATISTIC_AVG" hyperedge.attr.name.1="prior.events" sub.hyperedge.size="3"/>
   <observation name="EVENTS_CONDITIONAL_SIZE" type="CONDITIONAL_SIZE_UNDIR_HYPEREDGE_OBSERVATION" node.is.non.zero.on.attr="at.risk">
     <consider.event.type name="event"/>
   </observation>
