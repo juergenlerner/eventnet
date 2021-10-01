@@ -4,6 +4,8 @@ Jie Tang, Jing Zhang, Limin Yao, Juanzi Li, Li Zhang, and Zhong Su. **ArnetMiner
 
 ## Preprocess data for eventnet.hyper
 
+In general, the structure of the input data for eventnet.hyper is explained in the [RHEM tutorial](https://github.com/juergenlerner/eventnet/wiki/RHEM-first-steps-(tutorial)). The input data might be produced in a number of different ways and possibly starting from different original data. The scripts on this page are provided for convenience and reproducibility. 
+
 Download **DBLP-Citation-network V12** linked from [https://www.aminer.org/citation](https://www.aminer.org/citation). The precise format of the data might change from version to version. So if you want to prepocess a different version you might have to adapt `AminerJSON2CSV.java`. Extract the JSON file from the downloaded compressed file. Denote the extracted file by `dblp.v12.json`. Compile `AminerJSON2CSV.java` which needs the libraries [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) and [JSON Simple](https://code.google.com/archive/p/json-simple/). 
 
 Execute the JSON to CSV conversion by calling (possibly adapt filenames and/or classpath)
@@ -11,4 +13,4 @@ Execute the JSON to CSV conversion by calling (possibly adapt filenames and/or c
 java kn.uni.eventnet.hyper.util.coauthor.io.AminerJSON2CSV dblp.v12.json dblp.v12.csv
 ```
 
-Execute the script `coauthor_add_norm_citations.R` to compute a normalized citation count and write out a CSV file `dblp.v12.preproc.csv` for analysis with eventnet.hyper
+Execute the script `coauthor_add_norm_citations.R` to compute a normalized citation count and write out a CSV file `dblp.v12.preproc.csv` for analysis with eventnet.hyper.
