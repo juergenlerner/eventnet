@@ -1,5 +1,5 @@
 
-## output directory of eventnet (config.citations.has.xml)
+## output directory of eventnet (config.citations.hs.xml)
 setwd("<data directory>")
 
 ###################################################################
