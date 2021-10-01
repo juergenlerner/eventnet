@@ -14,3 +14,11 @@ java kn.uni.eventnet.hyper.util.coauthor.io.AminerJSON2CSV dblp.v12.json dblp.v1
 ```
 
 Execute the script `coauthor_add_norm_citations.R` to compute a normalized citation count and write out a CSV file `dblp.v12.preproc.csv` for analysis with eventnet.hyper.
+
+## Configuration files for eventnet.hyper
+
+The five configuration files `config.citations...xml` can be executed by eventnet.hyper to compute different types of features (explanatory variables) for published scientific papers. Configurations can be processed from the eventnet GUI or from a command line - see the [RHEM tutorial](https://github.com/juergenlerner/eventnet/wiki/RHEM-first-steps-(tutorial)). This assumes that the input file `dblp.v12.preproc.csv` is in the same directory from which eventnet has been executed (otherwise the input directory has to be updated in the configurations). The different kinds of features, or their combinations, are reflected in the filenames: `hs` for "hyperedge scores", `id` for high-dimensional sparse feature vectors coding the id of the paper's authors as categorical features, and `pc` for high-dimensional sparse feature vectors coding the past collaborators of the paper's authors. Computed features are stored in different output directories: `./output.hs`, `output.id.pc`, etc. 
+
+These configuration files are for computing features explaining or predicting the normalized number of citations of published papers and not for explaining/predicting which groups of scientists are more or less likely to co-author papers. (Configurations and code for the latter task will follow.) 
+
+The configuration `config.citations.hs.xml` is the only one that produces a rectangular (or full) CSV table with named columns as it is usual for eventnet or eventnet.hyper. This table can be analyzed with standard models (e.g., linear regression) for dense input data, see below. The other four configurations produce output files coding high-dimensional sparse feature vectors. The number of different feature dimensions is in the millions - but for each instance a much smaller number of features are non-zero and only the non-zero values are explicitly stored. We use these sparse features to train and test factorization machines (FM) with the [libFM](http://www.libfm.org/) software.
