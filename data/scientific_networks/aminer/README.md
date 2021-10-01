@@ -1,0 +1,1 @@
+On this page we list several scripts or auxiliary software to convert coauthor-network data from [https://www.aminer.org/citation](https://www.aminer.org/citation) into the input format of eventnet.hyper for analysis with RHEM.
