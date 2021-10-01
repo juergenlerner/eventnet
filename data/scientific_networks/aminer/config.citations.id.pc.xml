@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="config.dense" version="0.2">
+  <input.files accept=".csv" has.header="true" delimiter="COMMA" quote.char="DOUBLEQUOTE">
+    <input.directory name="."/>
+    <file name="dblp.v12.preproc.csv"/>
+  </input.files>
+  <output.directory name="./output.id.pc"/>
+  <event.components>
+    <component name="SOURCE" column.name="author_id"/>
+    <component name="TARGET" column.name="author_id"/>
+    <component name="TIME" column.name="year"/>
+    <component name="WEIGHT" column.name="norm.citations"/>
+    <component name="EVENT_INTERVAL_ID" column.name="paper.id"/>
+  </event.components>
+  <network.mode is.multimode="false"/>
+  <event.types>
+    <type name="EVENT" implied="true" admits.loops="true"/>
+  </event.types>
+  <time time.format.type="INTEGER" interval.type="TIME" time.unit="1"/>
+  <attribute name="num.prev.papers.exact.hyperedge" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UNDIR_HYPEREDGE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="EVENT">
+      <function type="CONSTANT" parameter="1.0"/>
+    </event.response>
+  </attribute>
+  <attribute name="num.prev.papers.exact.hyperedge.citation.weighted" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UNDIR_HYPEREDGE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="EVENT"/>
+  </attribute>
+  <attribute name="cum.citations.individual" class="UNDIR_HYPER_LEVEL"  type="UNDIR_HYPEREDGE_P_DEGREE_ATTRIBUTE" description="" sub.hyperedge.size="1">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="EVENT"/>
+  </attribute>
+  <statistic name="number.of.coauthors" type="UNDIR_HYPEREDGE_SIZE_STATISTIC"/>
+  <statistic name="discrete.neigh" type="UNDIR_HYPEREDGE_SPARSE_DISCRETE_NEIGHBORHOOD_STATISTIC" hyperedge.attr.name.1="num.prev.papers.exact.hyperedge"/>
+  <observation name="PAPERS" type="DEFAULT_UNDIR_HYPEREDGE_OBSERVATION" condition.on.hyperedge="true" does.print.sparse.statistics="true">
+    <consider.event.type name="EVENT"/>
+  </observation>
+</eventnet.configuration>
