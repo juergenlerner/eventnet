@@ -1,4 +1,6 @@
-On this page we list several scripts or auxiliary software to convert coauthor-network data from [https://www.aminer.org/citation](https://www.aminer.org/citation) into the input format of eventnet.hyper. We also demonstrate how to compute features (explanatory variables or hyperedge statistics) with eventnet.hyper and how this data is used to train and test models for citation prediction. Note that the actual data is provided by Aminer - here we just list scripts to preprocess and analyze this data with RHEM. A reference for the data is the following (also see the webpage given above).
+On this page we list several scripts or auxiliary software to convert coauthor-network data from [https://www.aminer.org/citation](https://www.aminer.org/citation) into the input format of eventnet.hyper. We also demonstrate how to compute features (explanatory variables or hyperedge statistics) with eventnet.hyper and how this data is used to train and test models for citation prediction; for an introduction to relational hyperevent models (RHEM) with eventnet.hyper, see the [RHEM tutorial](https://github.com/juergenlerner/eventnet/wiki/RHEM-first-steps-(tutorial)). 
+
+Note that the actual data is provided by Aminer - here we just list scripts to preprocess and analyze this data with RHEM. A reference for the data is the following (also see the webpage given above).
 
 Jie Tang, Jing Zhang, Limin Yao, Juanzi Li, Li Zhang, and Zhong Su. **ArnetMiner: Extraction and Mining of Academic Social Networks**. In _Proceedings of the Fourteenth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (SIGKDD'2008)_. pp.990-998.
 
@@ -25,4 +27,4 @@ The configuration `config.citations.hs.xml` is the only one that produces a rect
 
 ## Citation prediction based on hyperedge scores (LM)
 
-Predicing citations purely based on the computed hyperedge scores (output produced by the configuration `config.citations.hs.xml`) is straightforward and can for instance be done with linear regression models. The R script `citation_prediction_LM.R` demonstrates how to compute the root mean square error (RMSE) of a baseline (predicing that each paper receives the mean citations over the training data - which is zero due to the normalization of citation counts) and the error of a linear model that is fitted to the 23 hyperedge scores. 
+Predicing citations purely based on the computed hyperedge scores (output produced by the configuration `config.citations.hs.xml`) is straightforward and can for instance be done with linear regression models. The R script `citation_prediction_LM.R` demonstrates how to compute the root mean square error (RMSE) of a linear model that is fitted to the 23 hyperedge scores. 
