@@ -38,7 +38,7 @@ java -Xmx64g -cp eventnet.hyper-0.2.jar:commons-csv-1.5.jar kn.uni.eventnet.hype
 
 ## Training factorization machines with libFM
 
-Given the output from `ConvertToLibFM4Regression.java`, factorization machines can be trained and evaluated with [libFM](http://www.libfm.org/), for instance, by the following command
+Given the output from `ConvertToLibFM4Regression.java`, factorization machines to predict the normalized citation counts can be trained and evaluated with [libFM](http://www.libfm.org/), for instance, by the following command
 ```
 libFM -task r -train 0000_coauth.train.libfm -test 0000_coauth.test.libfm -meta 0000_grouping.txt -out 0000_coauth.out -dim '1,1,32' -iter 256 -method mcmc -init_stdev 0.1
 ```
