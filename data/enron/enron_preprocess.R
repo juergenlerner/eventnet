@@ -1,3 +1,9 @@
+## Convert data from https://github.com/patperry/interaction-proc/tree/master/data/enron
+## into the format required for modeling with RHEM via eventnet.
+
+## Download the three tables employees.tsv, messages.tsv, and recipients.tsv from the URL above. 
+## Then execute the following code to produce the file enron_events.csv (which is also available here).
+
 ## empty subject field (two tab characters delimiting an empty cell) 
 ## seem to cause read.table to skip those lines
 ## workaround: insert "<no subject>"
