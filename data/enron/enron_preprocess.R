@@ -2,7 +2,8 @@
 ## into the format required for modeling with RHEM via eventnet.
 
 ## Download the three tables employees.tsv, messages.tsv, and recipients.tsv from the URL above. 
-## Then execute the following code to produce the file enron_events.csv (which is also available here).
+## Then execute the following code to produce the file enron_events.csv, which is also available here at
+## https://github.com/juergenlerner/eventnet/raw/master/data/enron/enron_events.csv
 
 ## empty subject field (two tab characters delimiting an empty cell) 
 ## seem to cause read.table to skip those lines
