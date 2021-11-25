@@ -27,10 +27,10 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 
 **Past training events** 
 
-* [Polnet Summer-Academy](https://www.polver.uni-konstanz.de/materiellestaatstheorie/polnet/programm/sommerakademie-2019/), Konstanz, Germany. May 24, 2019.
-* [Relational event models for the analysis of social networks,](http://business-school.exeter.ac.uk/research/centres/rmc/events/relationaleventmodels/) University of Exeter, Business School. June 3-4, 2019.
-* [Sunbelt Social Networks Conference](http://sunbelt2019.ca), Montreal, Canada. June 19, 2019.
-* [European Conference on Social Networks](https://www.eusn2019.ethz.ch/), Zurich, Switzerland. September 12, 2019.
+* _Polnet Summer-Academy_, Konstanz, Germany. May 24, 2019.
+* _Relational event models for the analysis of social networks_, University of Exeter, Business School. June 3-4, 2019.
+* _Sunbelt Social Networks Conference_, Montreal, Canada. June 19, 2019.
+* _European Conference on Social Networks_, Zurich, Switzerland. September 12, 2019.
 
 ## Contact
 [J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
