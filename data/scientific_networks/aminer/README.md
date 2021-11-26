@@ -33,7 +33,7 @@ Predicing citations purely based on the computed hyperedge scores (output produc
 
 The output of eventnet.hyper produced by the four other configuration files (all but `config.citations.hs.xml`) provides high-dimensional sparse feature vectors to train and test factorization machines (FM) with the [libFM](http://www.libfm.org/). However, libFM requires that feature dimensions are given by consecutive integers (rather than string labels) and it requires a split into training and test data. This conversion could be done in a number of different ways. For convenience and reproducibility we provide the java class [`ConvertToLibFM4Regression.java`](https://github.com/juergenlerner/eventnet/blob/master/data/scientific_networks/aminer/ConvertToLibFM4Regression.java). The conversion can be started, for instance, with the command
 ```
-java -Xmx64g -cp eventnet.hyper-0.2.jar:commons-csv-1.5.jar kn.uni.eventnet.hyper.util.ConvertToLibFMSequence4Regression dblp.v12.preproc_PAPERS.csv dblp.v12.preproc_PAPERS.csv , EVENTNET:WEIGHT: EVENTNET:SOURCE: EVENTNET:TIME: 2014 2015 1 coauth.train.libfm coauth.test.libfm coauth.testp1.libfm grouping.txt
+java -Xmx64g -cp eventnet.hyper-0.2.jar:commons-csv-1.5.jar kn.uni.eventnet.hyper.util.ConvertToLibFM4Regression dblp.v12.preproc_PAPERS.csv dblp.v12.preproc_PAPERS.csv , EVENTNET:WEIGHT: EVENTNET:SOURCE: EVENTNET:TIME: 2014 2015 1 coauth.train.libfm coauth.test.libfm coauth.testp1.libfm grouping.txt
 ```
 
 ## Training factorization machines with libFM
