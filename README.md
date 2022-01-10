@@ -23,7 +23,7 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 **Online tutorials** for eventnet are in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
 
 **Training workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
-* [International "Winter Course," _Personal Networks: Theory, Methods and Applications_](https://grupsderecerca.uab.cat/egolab/node/354), Barcelona, Spain. February 7-11, 2022.
+* [International "Winter Course," Theory, Methods and Applications of Personal Networks](https://sway.office.com/1TpXMhGqKa7fTsAC), Barcelona, Spain. February 7-11, 2022.
 
 **Past training events** 
 
