@@ -47,7 +47,4 @@
   <observation name="EVENTS_CONDITIONAL_SIZE" type="CONDITIONAL_SIZE_UNDIR_HYPEREDGE_OBSERVATION" node.is.non.zero.on.attr="at.risk">
     <consider.event.type name="event"/>
   </observation>
-  <observation name="EVENTS_UNCONSTRAINED_SIZE" type="DEFAULT_UNDIR_HYPEREDGE_OBSERVATION" node.is.non.zero.on.attr="at.risk">
-    <consider.event.type name="event"/>
-  </observation>
 </eventnet.configuration>
