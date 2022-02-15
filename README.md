@@ -20,9 +20,9 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 **Citation:** Lerner, Lomi, Mowbray, Rollings, and Tranmer (2021). [**Dynamic network analysis of contact diaries.**](https://doi.org/10.1016/j.socnet.2021.04.001) _Social Networks_, 66:224-236. ([DOI: 10.1016/j.socnet.2021.04.001](https://doi.org/10.1016/j.socnet.2021.04.001))
 
 ## Tutorials and training 
-**Online tutorials** for eventnet are in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).
+**The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
 
-**Training workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
+Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 * [International "Winter Course," Theory, Methods and Applications of Personal Networks](https://sway.office.com/1TpXMhGqKa7fTsAC), Barcelona, Spain. February 7-11, 2022.
 
 **Past training events** 
