@@ -2,18 +2,18 @@
 Event network analyzer (eventnet): statistical analysis of networks of relational events.
 
 ## Download and use
-To use eventnet, download the file [eventnet-0.5.4.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.4.jar) and start the program by double-clicking or via the command `java -jar eventnet-0.5.4.jar`. Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 or higher. See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
+To use eventnet, download the file [eventnet-0.5.5.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.5.jar) and start the program by double-clicking or via the command `java -jar eventnet-0.5.5.jar`. Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 or higher. See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
 
-**Source code** (```.java``` files) are in [eventnet-0.5.4-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.4-src.jar).
+**Source code** (```.java``` files) are in [eventnet-0.5.5-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.5-src.jar).
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
 **Citation:** Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: 10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
 
 ## eventnet.hyper (RHEM)
-Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is an extension of eventnet to events involving any number of actors or nodes, such as meetings, co-authoring, multi-cast communication, or citation networks. To use eventnet.hyper, download the file [eventnet.hyper-0.3.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.3.jar). See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
+Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is an extension of eventnet to events involving any number of actors or nodes, such as meetings, co-authoring, multi-cast communication, or citation networks. To use eventnet.hyper, download the file [eventnet.hyper-0.4.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.4.jar). See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
 
-**Source code** for eventnet.hyper is in [eventnet.hyper-0.3-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.3-src.jar).
+**Source code** for eventnet.hyper is in [eventnet.hyper-0.4-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.4-src.jar).
 
 **License:** [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
