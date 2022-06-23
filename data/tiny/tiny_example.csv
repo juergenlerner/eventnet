@@ -1,0 +1,11 @@
+sender,receiver
+A,B
+A,D
+B,A
+B,C
+A,B
+D,C
+C,B
+A,C
+A,D
+A,C
