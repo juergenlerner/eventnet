@@ -23,15 +23,15 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
 
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
-* **REM beyond dyads: relational hyperevent modeling with eventnet**, within the [European Conference on Social Networks (EUSN 2022)](https://eusn2022.org/), Greenwich, UK. 12-16 September 2022 (the RHEM workshop is on September 12, afternoon).
+* [International "Winter Course," Theory, Methods and Applications of Personal Networks](https://webs.uab.cat/egolab/12th-course-personal-networks/), Barcelona, Spain. February 6-10, 2023.
 
 **Past training events** 
-
-* **Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction**, part of the [NUSC Summer School in Network and Data Science](https://www.gre.ac.uk/bus/events/nusc), Greenwich, UK. Mon 20th - Sat 25th June 2022 (the REM course is on June 24, 25).
-* [International "Winter Course," Theory, Methods and Applications of Personal Networks](https://sway.office.com/1TpXMhGqKa7fTsAC), Barcelona, Spain. February 7-11, 2022.
-* _Relational event models for the analysis of social networks_, University of Exeter, Business School. June 3-4, 2019.
-* _Sunbelt Social Networks Conference_, Montreal, Canada. June 19, 2019.
+* **REM beyond dyads: relational hyperevent modeling with eventnet**, within the _European Conference on Social Networks (EUSN 2022)_, Greenwich, UK. 12-16 September 2022 (the RHEM workshop is on September 12, afternoon).
+* **Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction**, part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. Mon 20th - Sat 25th June 2022 (the REM course is on June 24, 25).
+* _International "Winter Course," Theory, Methods and Applications of Personal Networks_, Barcelona, Spain. February 7-11, 2022.
 * _European Conference on Social Networks_, Zurich, Switzerland. September 12, 2019.
+* _Sunbelt Social Networks Conference_, Montreal, Canada. June 19, 2019.
+* _Relational event models for the analysis of social networks_, University of Exeter, Business School. June 3-4, 2019.
 
 ## Contact
 [J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
