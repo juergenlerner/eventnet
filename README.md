@@ -23,9 +23,11 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
 
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
-* [International "Winter Course," Theory, Methods and Applications of Personal Networks](https://webs.uab.cat/egolab/12th-course-personal-networks/), Barcelona, Spain. February 6-10, 2023.
+* [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://eusn2023.org/), within the _European Conference on Social Networks (EUSN 2023)_, Ljubljana, Slovenia. 4-8 September 2023 (the RHEM workshop is on September 4).
+* [**Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction**](https://www.gre.ac.uk/bus/events/nusc), part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. 19th - 23rd June 2023 (the REM course is on June 21st and 22nd).
 
 **Past training events** 
+* **International "Winter Course," Theory, Methods and Applications of Personal Networks**, Barcelona, Spain. February 6-10, 2023.
 * **REM beyond dyads: relational hyperevent modeling with eventnet**, within the _European Conference on Social Networks (EUSN 2022)_, Greenwich, UK. 12-16 September 2022 (the RHEM workshop is on September 12, afternoon).
 * **Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction**, part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. Mon 20th - Sat 25th June 2022 (the REM course is on June 24, 25).
 * _International "Winter Course," Theory, Methods and Applications of Personal Networks_, Barcelona, Spain. February 7-11, 2022.
