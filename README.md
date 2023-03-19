@@ -27,9 +27,9 @@ Moreover, training **workshops or courses** introducing eventnet are offered at 
 * [**Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction**](https://www.gre.ac.uk/bus/events/nusc), part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. 19th - 23rd June 2023 (the REM course is on June 21st and 22nd).
 
 **Past training events** 
-* **International "Winter Course," Theory, Methods and Applications of Personal Networks**, Barcelona, Spain. February 6-10, 2023.
-* **REM beyond dyads: relational hyperevent modeling with eventnet**, within the _European Conference on Social Networks (EUSN 2022)_, Greenwich, UK. 12-16 September 2022 (the RHEM workshop is on September 12, afternoon).
-* **Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction**, part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. Mon 20th - Sat 25th June 2022 (the REM course is on June 24, 25).
+* _International "Winter Course," Theory, Methods and Applications of Personal Networks_, Barcelona, Spain. February 6-10, 2023.
+* _REM beyond dyads: relational hyperevent modeling with eventnet_, within the _European Conference on Social Networks (EUSN 2022)_, Greenwich, UK. 12-16 September 2022 (the RHEM workshop is on September 12, afternoon).
+* _Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction_, part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. Mon 20th - Sat 25th June 2022 (the REM course is on June 24, 25).
 * _International "Winter Course," Theory, Methods and Applications of Personal Networks_, Barcelona, Spain. February 7-11, 2022.
 * _European Conference on Social Networks_, Zurich, Switzerland. September 12, 2019.
 * _Sunbelt Social Networks Conference_, Montreal, Canada. June 19, 2019.
@@ -39,4 +39,4 @@ Moreover, training **workshops or courses** introducing eventnet are offered at 
 [J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
 
 ## Funding
-We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2024: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
+We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2025: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
