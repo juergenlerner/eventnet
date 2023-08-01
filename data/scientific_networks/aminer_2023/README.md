@@ -22,7 +22,7 @@ Explanatory variables ("hyperedge statistics") for various effects can be comput
 ```
 java -Xmx250g -jar eventnet.hyper-0.6.jar aminer.config.joint.txt
 ```
-(Recall that there is [**Troubleshooting help page**](https://github.com/juergenlerner/eventnet/wiki/Troubleshooting-(help)).)
+To make this processing work it is best if the jar file, csv file, and the configuration file are all in the working directory from where the `java` command is executed. (Recall that there is [**Troubleshooting help page**](https://github.com/juergenlerner/eventnet/wiki/Troubleshooting-(help)).)
 
 Estimation of RHEM parameters with the `coxph()` function is illustrated in the R script [`aminer_model.R`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer_model.R).
 
