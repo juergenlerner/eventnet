@@ -12,6 +12,6 @@ Download **DBLP-Citation-network V14** linked from [https://www.aminer.org/citat
 
 To generate the input file for eventnet, considering only journal publications, execute the JSON to CSV conversion by calling (possibly adapt filenames and/or classpath)
 ```
-java -Xmx250g AminerJSON2CSV dblp_v14.json dblp_v14_preproc_Journal.csv Journal
+java -Xmx250g AminerJSON2CSVDocType dblp_v14.json dblp_v14_preproc_Journal.csv Journal
 ```
 The generated CSV file (e.g. `dblp_v14_preproc_Journal.csv`) serves as input file for eventnet.
