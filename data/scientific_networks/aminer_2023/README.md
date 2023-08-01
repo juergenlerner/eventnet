@@ -1,4 +1,4 @@
-On this page we provide auxiliary software to convert scientific networks from [https://www.aminer.org/citation](https://www.aminer.org/citation), version V14, into the input format of eventnet.hyper. Moreover, there is an eventnet configuration file to compute hyperedge statistics with which various effects in interdependent collaboration and citation networks can be tested, see the [tutorial on analyzing the coevolution of collaboration and references to prior work](https://github.com/juergenlerner/eventnet/wiki/Coevolution-of-collaboration-and-references-to-prior-work-(tutorial)). 
+On this page we provide auxiliary software to convert scientific networks from [https://www.aminer.org/citation](https://www.aminer.org/citation), version V14, into the input format of eventnet.hyper. Moreover, we provide an eventnet configuration file and an R script to compute hyperedge statistics and to test various effects in interdependent collaboration and citation networks, see the [tutorial on analyzing the coevolution of collaboration and references to prior work](https://github.com/juergenlerner/eventnet/wiki/Coevolution-of-collaboration-and-references-to-prior-work-(tutorial)). 
 
 Note that the actual data is provided by Aminer - here we just list scripts to preprocess and analyze this data with RHEM. A reference for the data is the following (also see the webpage given above).
 
@@ -14,3 +14,4 @@ To generate the input file for eventnet, considering only journal publications, 
 ```
 java -Xmx250g AminerJSON2CSV dblp_v14.json dblp_v14_preproc_Journal.csv Journal
 ```
+The generated CSV file (e.g. `dblp_v14_preproc_Journal.csv`) serves as input file for eventnet.
