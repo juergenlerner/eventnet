@@ -15,3 +15,15 @@ To generate the input file for eventnet, considering only journal publications, 
 java -Xmx250g AminerJSON2CSVDocType dblp_v14.json dblp_v14_preproc_Journal.csv Journal
 ```
 The generated CSV file (e.g. `dblp_v14_preproc_Journal.csv`) serves as input file for eventnet.
+
+## Specify and estimate RHEM
+
+Explanatory variables ("hyperedge statistics") for various effects can be computed with eventnet.hyper as defined in the illustrating configuration file [`aminer.config.joint.txt`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer.config.joint.txt). To execute the processing from the command line, use the command
+```
+java -Xmx250g -jar eventnet.hyper-0.6.jar aminer.config.joint.txt
+```
+(Recall that there is [**Troubleshooting help page**](https://github.com/juergenlerner/eventnet/wiki/Troubleshooting-(help)).)
+
+Estimation of RHEM parameters with the `coxph()` function is illustrated in the R script [`aminer_model.R`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer_model.R).
+
+More explanations are given in the [tutorial on analyzing the coevolution of collaboration and references to prior work](https://github.com/juergenlerner/eventnet/wiki/Coevolution-of-collaboration-and-references-to-prior-work-(tutorial)).
