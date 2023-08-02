@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<eventnet.configuration name="aminer.config" version="0.6">
+<eventnet.configuration name="aminer.config" version="0.5">
   <input.files accept=".csv" has.header="true" delimiter="COMMA" quote.char="DOUBLEQUOTE">
     <input.directory name="."/>
     <file name="dblp_v14_preproc_Journal.csv"/>
