@@ -20,7 +20,7 @@ The generated CSV file (e.g. `dblp_v14_preproc_Journal.csv`) serves as input fil
 
 Explanatory variables ("hyperedge statistics") for various effects can be computed with eventnet.hyper as defined in the illustrating configuration file [`aminer.config.joint.txt`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer.config.joint.txt). To execute the processing from the command line, use the command
 ```
-java -Xmx250g -jar eventnet.hyper-0.6.jar aminer.config.joint.txt
+java -Xmx250g -jar eventnet.hyper-0.5.jar aminer.config.joint.txt
 ```
 To make this processing work it is best if the jar file, csv file, and the configuration file are all in the working directory from where the `java` command is executed. (Recall that there is [**Troubleshooting help page**](https://github.com/juergenlerner/eventnet/wiki/Troubleshooting-(help)).)
 
