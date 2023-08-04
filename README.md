@@ -35,6 +35,9 @@ Moreover, training **workshops or courses** introducing eventnet are offered at 
 * _Sunbelt Social Networks Conference_, Montreal, Canada. June 19, 2019.
 * _Relational event models for the analysis of social networks_, University of Exeter, Business School. June 3-4, 2019.
 
+## References
+There is a [commented literature list](https://github.com/juergenlerner/eventnet/wiki/References-(list)) of own work on relational event models (REM) or relational hyperevent models (RHEM), using the eventnet software or (published or unpublished) predecessor software in its empirical analysis. The listed papers are expected to complement the eventnet tutorials in providing more formal details, a better embedding into related work, and a more thorough discussion of objectives and contributions. They may also point to further illustrating use cases of REM and RHEM.
+
 ## Contact
 [J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
 
