@@ -51,6 +51,7 @@ my.model <- coxph(Surv(time = rep(1,nrow(my.events)), event = my.events$IS_OBSER
                     + author.closure.by.coref.from.author
                     #+ author.closure.by.transitive.coref.author
                     + strata(stratum)
+                    , robust = TRUE
                     , data = my.events)
 summary(my.model)
 
