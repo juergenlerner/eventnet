@@ -1,6 +1,11 @@
 # eventnet
 Event network analyzer (eventnet): statistical analysis of networks of relational events.
 
+## News
+
+Consider attending the following one-day (6 hours) workshop on RHEM at the INSNA Sunbelt Conference
+* [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024.
+
 ## Download and use (eventnet for dyadic events / REM)
 To use eventnet, download the file [eventnet-0.5.6.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.6.jar) and start the program by double-clicking or via the command `java -jar eventnet-0.5.6.jar`. Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher. See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
 
