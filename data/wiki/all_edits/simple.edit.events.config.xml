@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="test" version="0.5.2">
+  <input.files accept=".csv" has.header="true" delimiter="SEMICOLON" quote.char="DOUBLEQUOTE">
+    <input.directory name="."/>
+    <file name="WikiEvent.2021.csv"/>
+  </input.files>
+  <output.directory name="."/>
+  <event.components>
+    <component name="SOURCE" column.name="user"/>
+    <component name="TARGET" column.name="article"/>
+    <component name="TIME" column.name="time"/>
+  </event.components>
+  <network.mode is.multimode="true" number.of.modes="2">
+    <node.set index="0" name="users"/>
+    <node.set index="1" name="articles"/>
+  </network.mode>
+  <event.types>
+    <type name="EVENT" implied="true" admits.loops="false" source.node.set="users" target.node.set="articles"/>
+  </event.types>
+  <time time.format.type="INTEGER" interval.type="EVENT" time.unit="86400000"/>
+  <attribute name="recent_edit" class="DYAD_LEVEL" type="DEFAULT_DYAD_LEVEL_ATTRIBUTE" description="cummulative edit events with halflife of 30 days">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.1"/>
+    <event.response event.type="EVENT"/>
+  </attribute>
+  <attribute name="recent_user_activity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="outgoing edit events of user with halflife of 30 days">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.1"/>
+    <event.response event.type="EVENT" direction="OUT"/>
+  </attribute>
+  <attribute name="recent_article_popularity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="incomming edit events of article with halflife of 30 days">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="30.0" zero.if.below="0.1"/>
+    <event.response event.type="EVENT" direction="IN"/>
+  </attribute>
+  <statistic name="repetition" type="DYAD_STATISTIC" description="past activity on the same dyad" dyad.attr.name.1="recent_edit" direction.1="OUT">
+    <function type="LOG1P"/>
+  </statistic>
+  <statistic name="user_activity" type="NODE_STATISTIC" description="past activity of the same user" node.attr.name.1="recent_user_activity" endpoint="SOURCE">
+    <function type="LOG1P"/>
+  </statistic>
+  <statistic name="article_popularity" type="NODE_STATISTIC" description="past activity on the same article" node.attr.name.1="recent_article_popularity" endpoint="TARGET">
+    <function type="LOG1P"/>
+  </statistic>
+  <statistic name="four_cycle" type="FOUR_CYCLE_STATISTIC" description="" dyad.attr.name.1="recent_edit" direction.1="SYM" dyad.attr.name.2="recent_edit" direction.2="SYM" dyad.attr.name.3="recent_edit" direction.3="SYM">
+    <function type="LOG1P"/>
+    <function.combine.serial type="MIN"/>
+  </statistic>
+  <statistic name="number_of_users" type="NODE_COUNT_STATISTIC" description="" node.set.name.1="users"/>
+  <statistic name="number_of_articles" type="NODE_COUNT_STATISTIC" description="" node.set.name.1="articles"/>
+  <observation name="EDIT" type="DEFAULT_DYADIC_OBSERVATION" description="explaining edit events; sampling from observed events" apply.case.control.sampling="true" number.of.non.events="1" apply.sampling.from.observed.events="true" prob.to.sample.observed.events="1E-2" source.node.set="users" target.node.set="articles"/>
+</eventnet.configuration>
