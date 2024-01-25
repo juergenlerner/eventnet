@@ -1,3 +1,11 @@
 This directory contains files to analyze event networks from all edit events in the English-language version of Wikipedia as described in the [tutorial on analyzing large event networks](https://github.com/juergenlerner/eventnet/wiki/Large-event-networks-(tutorial)).
 
 The replication data is available at the Zenodo website. Specifically, the 2018 data is available at [**Wikipedia Edit Event Data 2018 (WikiEvent.2018)**](https://doi.org/10.5281/zenodo.1626323) (DOI: `10.5281/zenodo.1626323`). A similar newer data file containing Wikipedia edit events up to January 2021 can be found here: [**WikiEvent.2021**](https://zenodo.org/record/4522067) (DOI: `10.5281/zenodo.4522066`). Download any of the big ZIP files to your computer and unzip it.
+
+Explanatory variables (REM statistics) for these relational events can be computed with eventnet using the configuration file [simple.edit.events.config.xml](https://github.com/juergenlerner/eventnet/raw/master/data/wiki/all_edits/simple.edit.events.config.xml). The CSV filename in this configuration is for the 2021 data. Note that you also may have to adapt the input and/or output directory name. This will produce a CSV file containing REM statistics for sampled events and associated controls. Model parameters of a REM can be estimated as illustrated in this R code file: [simple_edit_events_model.R](https://github.com/juergenlerner/eventnet/raw/master/data/wiki/all_edits/simple_edit_events_model.R)
+
+Another eventnet configuration file [config.test.sampling.reliability.xml](https://github.com/juergenlerner/eventnet/raw/master/data/wiki/all_edits/config.test.sampling.reliability.xml) will produce more than 300 CSV files containing REM statistics, varying sample parameters, which can be used to assess the variability of REM model parameters that is cause by sampling, as it has been proposed in this paper:
+
+Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: https://doi.org/10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
+
+See the [tutorial on analyzing large event networks](https://github.com/juergenlerner/eventnet/wiki/Large-event-networks-(tutorial)) for additional information.
