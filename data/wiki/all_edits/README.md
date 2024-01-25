@@ -1,1 +1,3 @@
 This directory contains files to analyze event networks from all edit events in the English-language version of Wikipedia as described in the [tutorial on analyzing large event networks](https://github.com/juergenlerner/eventnet/wiki/Large-event-networks-(tutorial)).
+
+The replication data is available at the Zenodo website. Specifically, the 2018 data is available at [**Wikipedia Edit Event Data 2018 (WikiEvent.2018)**](https://doi.org/10.5281/zenodo.1626323) (DOI: `10.5281/zenodo.1626323`). A similar newer data file containing Wikipedia edit events up to January 2021 can be found here: [**WikiEvent.2021**](https://zenodo.org/record/4522067) (DOI: `10.5281/zenodo.4522066`). Download any of the big ZIP files to your computer and unzip it.
