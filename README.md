@@ -16,9 +16,9 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 **Citation:** Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: 10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
 
 ## Download and use (eventnet.hyper / RHEM)
-Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is an extension of eventnet to events involving any number of actors or nodes, such as meetings, co-authoring, multi-cast communication, or citation networks. To use eventnet.hyper, download the file [eventnet.hyper-0.5.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.5.jar). See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
+Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is an extension of eventnet to events involving any number of actors or nodes, such as meetings, co-authoring, multi-cast communication, or citation networks. To use eventnet.hyper, download the file [eventnet.hyper-0.6.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.6.jar). See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
 
-**Source code** for eventnet.hyper is in [eventnet.hyper-0.5-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.5-src.jar).
+**Source code** for eventnet.hyper is in [eventnet.hyper-0.6-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.6-src.jar).
 
 **License:** [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
