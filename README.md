@@ -22,7 +22,7 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 
 **License:** [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
-**Citation:** Lerner and Lomi (2023). [**Relational hyperevent models for polyadic interaction networks**](https://doi.org/10.1093/jrsssa/qnac012). _Journal of the Royal Statistical Society: Series A_.
+**Citation:** Lerner and Lomi (2023). [**Relational hyperevent models for polyadic interaction networks**](https://doi.org/10.1093/jrsssa/qnac012). _Journal of the Royal Statistical Society: Series A_. ([https://doi.org/10.1093/jrsssa/qnac012](https://doi.org/10.1093/jrsssa/qnac012))
 
 ## Tutorials and training 
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
