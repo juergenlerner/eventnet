@@ -33,7 +33,7 @@ Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
 
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
-* [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024.
+* [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024. (The RHEM workshop is on Tuesday, June 25.)
 
 **Past training events** 
 * _International "Winter Course," Theory, Methods and Applications of Personal Networks_, UAB Egolab, Barcelona, Spain. February 5-9, 2024.
