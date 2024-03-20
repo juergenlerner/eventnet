@@ -11,6 +11,8 @@ Event network analyzer (eventnet): statistical analysis of networks of relationa
 * RHEM can now also be specified purely in the graphical user interface (GUI).
 * RHEM effects have been completely reorganized. The number of different core types of RHEM statistics could be reduced but a more efficent use of the arguments of statistics actually provides a much larger variation of possible RHEM effects than in prior versions. Note that because of this reorganization, configuration files from versions prior to 1.0 will most likely no longer work with eventnet one. (Note, however, that the JAR files of prior versions are still available at [https://github.com/juergenlerner/eventnet/tree/master/jars](https://github.com/juergenlerner/eventnet/tree/master/jars).)
 
+RHEM effects available in Version 1.0 or later are exhaustively listed and discussed in the [Reference guide on RHEM effects](https://github.com/juergenlerner/eventnet/wiki/RHEM-effects-(reference-guide)). However, users new to eventnet are recommended to first have a look at the more basic tutorials linked from the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki/).
+
 ## Download and use (eventnet for dyadic events / REM)
 To use eventnet, download the file [eventnet-0.5.6.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.6.jar) and start the program by double-clicking or via the command `java -jar eventnet-0.5.6.jar`. Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher. See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
 
