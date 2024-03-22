@@ -1,6 +1,12 @@
 # eventnet
 Event network analyzer (eventnet): statistical analysis of networks of relational events.
 
+A **relational event** represents time-stamped interaction ( _who does when what to whom_). Examples include a person sending an message to another person, a Wikipedia user editing a Wikipedia article, a customer buying a certain product, or a country signing an agreement with another country. A **relational hyperevent** represents time-stamped interaction among varying and potentially large numbers of "nodes". Examples include meeting events, team work (e.g., coauthoring of papers), multi-cast or "one-to-many" communication such as email, or papers citing lists of other papers in their references. 
+
+Relational (hyper) event models **R(H)EM** seek to model sequences of such interaction events to uncover or test factors explaining that some nodes interact at a higher rate than others. While the core statistical models are well-established in survival or event-history analysis (e.g., Cox regression) and are implemented in numerous free and commercial statistical software packages, typical explanatory variables of REM and RHEM are novel, network-specific, and sometimes conceptually and computationally demanding to understand and implement. This gap is filled by the eventnet software.
+
+See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) to get started.
+
 ## News
 
 **Consider attending the following workshop on RHEM** (one-day / 6 hours) at the INSNA Sunbelt Conference
