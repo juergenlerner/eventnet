@@ -12,30 +12,32 @@ See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventn
 **Consider attending the following workshop on RHEM** (one-day / 6 hours) at the INSNA Sunbelt Conference
 * [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024. (The RHEM workshop is on Tuesday, June 25.)
 
-**Pre-release of eventnet one is available** and can be downloaded as [eventnet-1.0-pre.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0-pre.jar). Eventnet one (Version 1.0 or later) comes with three important changes.
-* The functionality for dyadic relational event models (REM) and for relational hyperevent models (RHEM) is now provided in a single JAR file (`eventnet-1.0-pre.jar` or later).
+**Release of eventnet one** 
+
+Eventnet one (Version 1.0 or later) can be downloaded as [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar). Eventnet one comes with three important changes.
+* The functionality for dyadic relational event models (REM) and for relational hyperevent models (RHEM) is now provided in a single JAR file (`eventnet-1.0.jar` or later).
 * RHEM can now also be specified purely in the graphical user interface (GUI).
 * RHEM effects have been completely reorganized. The number of different core types of RHEM statistics could be reduced but a more efficent use of the arguments of statistics actually provides a much larger variation of possible RHEM effects than in prior versions. Note that because of this reorganization, configuration files from versions prior to 1.0 will most likely no longer work with eventnet one. (Note, however, that the JAR files of prior versions are still available at [https://github.com/juergenlerner/eventnet/tree/master/jars](https://github.com/juergenlerner/eventnet/tree/master/jars).)
 
 RHEM effects available in Version 1.0 or later are exhaustively listed and discussed in the [Reference guide on RHEM effects](https://github.com/juergenlerner/eventnet/wiki/RHEM-effects-(reference-guide)). However, users new to eventnet are recommended to first have a look at the more basic tutorials linked from the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki/).
 
-## Download and use (eventnet for dyadic events / REM)
-To use eventnet, download the file [eventnet-0.5.6.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.6.jar) and start the program by double-clicking or via the command `java -jar eventnet-0.5.6.jar`. Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher. See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
+## Download and use (eventnet for dyadic events / REM and for relational hyperevent models / RHEM)
+To use eventnet, download the file [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar) and start the program by either of:
+* double-clicking on the JAR file opens the eventnet graphical user interface (GUI)
+* typing the command `java -jar eventnet-1.0.jar` opens the eventnet GUI
+* typing the command `java -jar eventnet-1.0.jar <configuration_filename.xml>`, where `<configuration_filename.xml>` is the name of a file containing a fully specified eventnet configuration, executes this configuration without opening the GUI.
 
-**Source code** (```.java``` files) are in [eventnet-0.5.6-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-0.5.6-src.jar).
+**See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.**
+
+Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher.
+
+**Source code** (`.java` files) are in [eventnet-1.0-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0-src.jar).
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
-**Citation:** Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: 10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
-
-## Download and use (eventnet.hyper / RHEM)
-Relational hyperevent models (RHEM) can be analyzed with eventnet.hyper which is an extension of eventnet to events involving any number of actors or nodes, such as meetings, co-authoring, multi-cast communication, or citation networks. To use eventnet.hyper, download the file [eventnet.hyper-0.6.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.6.jar). See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.
-
-**Source code** for eventnet.hyper is in [eventnet.hyper-0.6-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet.hyper-0.6-src.jar).
-
-**License:** [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
-
-**Citation:** Lerner and Lomi (2023). [**Relational hyperevent models for polyadic interaction networks**](https://doi.org/10.1093/jrsssa/qnac012). _Journal of the Royal Statistical Society: Series A_. ([https://doi.org/10.1093/jrsssa/qnac012](https://doi.org/10.1093/jrsssa/qnac012))
+**Citation:** 
+* Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: 10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
+* Lerner and Lomi (2023). [**Relational hyperevent models for polyadic interaction networks**](https://doi.org/10.1093/jrsssa/qnac012). _Journal of the Royal Statistical Society: Series A_. ([https://doi.org/10.1093/jrsssa/qnac012](https://doi.org/10.1093/jrsssa/qnac012))
 
 ## Tutorials and training 
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
