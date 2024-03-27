@@ -24,8 +24,8 @@ RHEM effects available in Version 1.0 or later are exhaustively listed and discu
 ## Download and use (eventnet for REM and RHEM)
 To use eventnet, download the file [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar) and start the program by either of:
 * double-clicking on the JAR file opens the eventnet graphical user interface (GUI)
-* typing the command `java -jar eventnet-1.0.jar` opens the eventnet GUI
-* typing the command `java -jar eventnet-1.0.jar <configuration_filename.xml>`, where `<configuration_filename.xml>` is the name of a file containing a fully specified eventnet configuration, executes this configuration without opening the GUI.
+* typing the command `java -jar eventnet-x.y.jar` opens the eventnet GUI
+* typing the command `java -jar eventnet-x.y.jar <configuration_filename.xml>`, where `<configuration_filename.xml>` is the name of a file containing a fully specified eventnet configuration, executes this configuration without opening the GUI.
 
 **See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.**
 
