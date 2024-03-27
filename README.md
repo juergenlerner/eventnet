@@ -14,14 +14,14 @@ See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventn
 
 **+++ Release of eventnet one +++** 
 
-Eventnet one (Version 1.0 or later) can be downloaded as [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar). Eventnet one comes with three important changes.
+Eventnet one (Version 1.0 or later) can be downloaded as [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar) and comes with three important changes.
 * The functionality for dyadic relational event models (REM) and for relational hyperevent models (RHEM) is now provided in a single JAR file (`eventnet-1.0.jar` or later).
 * RHEM can now also be specified purely in the graphical user interface (GUI).
 * RHEM effects have been completely reorganized. The number of different core types of RHEM statistics could be reduced but a more efficent use of the arguments of statistics actually provides a much larger variation of possible RHEM effects than in prior versions. Note that because of this reorganization, configuration files from versions prior to 1.0 will most likely no longer work with eventnet one. (Note, however, that the JAR files of prior versions are still available at [https://github.com/juergenlerner/eventnet/tree/master/jars](https://github.com/juergenlerner/eventnet/tree/master/jars).)
 
 RHEM effects available in Version 1.0 or later are exhaustively listed and discussed in the [Reference guide on RHEM effects](https://github.com/juergenlerner/eventnet/wiki/RHEM-effects-(reference-guide)). However, users new to eventnet are recommended to first have a look at the more basic tutorials linked from the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki/).
 
-## Download and use (eventnet for dyadic events / REM and for relational hyperevent models / RHEM)
+## Download and use (eventnet for REM and RHEM)
 To use eventnet, download the file [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar) and start the program by either of:
 * double-clicking on the JAR file opens the eventnet graphical user interface (GUI)
 * typing the command `java -jar eventnet-1.0.jar` opens the eventnet GUI
