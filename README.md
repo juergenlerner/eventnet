@@ -12,7 +12,7 @@ See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventn
 **Consider attending the following workshop on RHEM** (one-day / 6 hours) at the INSNA Sunbelt Conference
 * [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024. (The RHEM workshop is on Tuesday, June 25.)
 
-**Release of eventnet one** 
+**+++ Release of eventnet one +++** 
 
 Eventnet one (Version 1.0 or later) can be downloaded as [eventnet-1.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.0.jar). Eventnet one comes with three important changes.
 * The functionality for dyadic relational event models (REM) and for relational hyperevent models (RHEM) is now provided in a single JAR file (`eventnet-1.0.jar` or later).
