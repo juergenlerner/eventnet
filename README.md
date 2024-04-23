@@ -29,7 +29,7 @@ To use eventnet, download the file [eventnet-1.1.jar](https://github.com/juergen
 
 **See the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki) for online tutorials.**
 
-Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher.
+Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher. An alternative to the JRE by Oracle is the [Eclipse Temurin JRE](https://adoptium.net/temurin/releases/).
 
 **Source code** (`.java` files) are in [eventnet-1.1-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.1-src.jar).
 
