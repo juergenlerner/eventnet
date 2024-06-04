@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="enron.config" version="1.1">
+  <input.files accept=".csv" has.header="true" delimiter="COMMA" quote.char="DOUBLEQUOTE">
+    <input.directory name="."/>
+    <file name="enron_events.csv"/>
+  </input.files>
+  <output.directory name="."/>
+  <event.components>
+    <component name="SOURCE" column.name="sender.id"/>
+    <component name="TARGET" column.name="receiver.id"/>
+    <component name="TIME" column.name="time"/>
+    <component name="TYPE" column.name="type"/>
+    <component name="WEIGHT" column.name="weight"/>
+    <component name="EVENT_INTERVAL_ID" column.name="message.id"/>
+  </event.components>
+  <network.mode is.multimode="false"/>
+  <event.types>
+    <type name="is.senior" implied="false" admits.loops="true"/>
+    <type name="is.in.Trading" implied="false" admits.loops="true"/>
+    <type name="is.female" implied="false" admits.loops="true"/>
+    <type name="is.in.Legal" implied="false" admits.loops="true"/>
+    <type name="department" implied="false" admits.loops="true"/>
+    <type name="email" implied="false" admits.loops="false"/>
+    <type name="add.actor" implied="false" admits.loops="true"/>
+  </event.types>
+  <time time.format.type="INTEGER" interval.type="EVENT_INTERVAL" time.unit="60"/>
+  <attribute name="is.female" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="is.female" direction="OUT"/>
+  </attribute>
+  <attribute name="is.senior" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="is.senior" direction="OUT"/>
+  </attribute>
+  <attribute name="is.in.trading" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="is.in.Trading" direction="OUT"/>
+  </attribute>
+  <attribute name="is.in.legal" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="is.in.Legal" direction="OUT"/>
+  </attribute>
+  <attribute name="department" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="department" direction="OUT"/>
+  </attribute>
+  <attribute name="emails" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="10080.0"/>
+    <event.response event.type="email"/>
+  </attribute>
+  <attribute name="emails.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_DHE" description="">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="10080.0"/>
+    <event.response event.type="email"/>
+  </attribute>
+  <attribute name="emails.undirected" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY" decay.time.scale="TIME_UNIT" halflife="10080.0"/>
+    <event.response event.type="email"/>
+  </attribute>
+  <attribute name="at.risk" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="add.actor" direction="OUT"/>
+  </attribute>
+  <statistic name="num.receivers" type="DHE_SIZE_STAT" endpoint="TARGET"/>
+  <statistic name="sender.seniority" type="DHE_NODE_STAT" node.attr.name.1="is.senior" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.avg.seniority" type="DHE_NODE_STAT" node.attr.name.1="is.senior" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.pair.abs.diff.seniority" type="DHE_NODE_STAT" node.attr.name.1="is.senior" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="sender.receiver.abs.diff.seniority" type="DHE_NODE_STAT" node.attr.name.1="is.senior" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="sender.female" type="DHE_NODE_STAT" node.attr.name.1="is.female" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.avg.female" type="DHE_NODE_STAT" node.attr.name.1="is.female" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.pair.abs.diff.female" type="DHE_NODE_STAT" node.attr.name.1="is.female" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="sender.receiver.abs.diff.female" type="DHE_NODE_STAT" node.attr.name.1="is.female" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="sender.in.legal" type="DHE_NODE_STAT" node.attr.name.1="is.in.legal" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.avg.in.legal" type="DHE_NODE_STAT" node.attr.name.1="is.in.legal" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="sender.in.trading" type="DHE_NODE_STAT" node.attr.name.1="is.in.trading" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.avg.in.trading" type="DHE_NODE_STAT" node.attr.name.1="is.in.trading" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.pair.frac.diff.department" type="DHE_NODE_STAT" node.attr.name.1="department" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="CATDIFF"/>
+  </statistic>
+  <statistic name="sender.receiver.frac.diff.department" type="DHE_NODE_STAT" node.attr.name.1="department" na.value="-1.0">
+    <aggregation.function type="CATDIFF"/>
+  </statistic>
+  <statistic name="repetition" type="DHE_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails"/>
+  <statistic name="undirected.repetition" type="DHE_REPETITION_STAT" direction.1="SYM" hyperedge.attr.name.1="emails.undirected"/>
+  <statistic name="r.sub.rep.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="0" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="r.sub.rep.2" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="0" target.size="2">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="r.sub.rep.3" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="0" target.size="3">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="s.r.sub.rep.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="s.r.sub.rep.2" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="1" target.size="2">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="reciprocation" type="DHE_SUB_REPETITION_STAT" direction.1="IN" hyperedge.attr.name.1="emails" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="sender.indeg" type="DHE_SUB_REPETITION_STAT" direction.1="IN" hyperedge.attr.name.1="emails" source.size="1" target.size="0">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="receiver.outdeg" type="DHE_SUB_REPETITION_STAT" direction.1="IN" hyperedge.attr.name.1="emails" source.size="0" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="interact.receivers.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="1" target.size="1" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="interact.receivers.2" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="emails" source.size="1" target.size="2" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="transitive.closure" type="DHE_CLOSURE_STAT" dyad.attr.name.1="emails.dyadic" direction.1="OUT" dyad.attr.name.2="emails.dyadic" direction.2="IN">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="cyclic.closure" type="DHE_CLOSURE_STAT" dyad.attr.name.1="emails.dyadic" direction.1="IN" dyad.attr.name.2="emails.dyadic" direction.2="OUT">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="shared.sender" type="DHE_CLOSURE_STAT" dyad.attr.name.1="emails.dyadic" direction.1="IN" dyad.attr.name.2="emails.dyadic" direction.2="IN">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="shared.receiver" type="DHE_CLOSURE_STAT" dyad.attr.name.1="emails.dyadic" direction.1="OUT" dyad.attr.name.2="emails.dyadic" direction.2="OUT">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <observation name="EMAILS" type="COND_SIZE_DHE_OBS" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="100" non.events.are.per.observed.event="true" source.is.non.zero.on.attr="at.risk" target.is.non.zero.on.attr="at.risk">
+    <consider.event.type name="email"/>
+  </observation>
+  <observation name="EMAILS_COND_SENDER" type="COND_SIZE_DHE_OBS" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="100" non.events.are.per.observed.event="true" source.is.non.zero.on.attr="at.risk" target.is.non.zero.on.attr="at.risk" condition.on.source="true">
+    <consider.event.type name="email"/>
+  </observation>
+</eventnet.configuration>
