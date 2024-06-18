@@ -24,6 +24,8 @@ java -Xmx250g -jar eventnet.hyper-0.5.jar aminer.config.joint.txt
 ```
 To make this processing work it is best if the jar file, csv file, and the configuration file are all in the working directory from where the `java` command is executed. (Recall that there is [**Troubleshooting help page**](https://github.com/juergenlerner/eventnet/wiki/Troubleshooting-(help)).)
 
+Note that the configuration file linked above still needs to be processed with the [older versions of eventnet](https://github.com/juergenlerner/eventnet/tree/master/jars/old_versions-0.x), in particular with `eventnet.hyper-0.6.jar`. In the near future we will adapt this configuration file to the newer versions of eventnet (1.0 or later).
+
 Estimation of RHEM parameters with the `coxph()` function is illustrated in the R script [`aminer_model.R`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer_model.R).
 
 More explanations are given in the [tutorial on analyzing the coevolution of collaboration and references to prior work](https://github.com/juergenlerner/eventnet/wiki/Coevolution-of-collaboration-and-references-to-prior-work-(tutorial)).
