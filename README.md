@@ -9,9 +9,6 @@ See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventn
 
 ## News
 
-**Consider attending the following workshop on RHEM** (one-day / 6 hours) at the INSNA Sunbelt Conference
-* [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024. (The RHEM workshop is on Tuesday, June 25.)
-
 **+++ Release of eventnet one +++** 
 
 Eventnet one (Version 1.0 or later), latest release in [eventnet-1.1.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.1.jar), comes with three important changes.
@@ -43,9 +40,13 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
 
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
-* [**REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)**](https://sunbelt2024.com/), within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024. (The RHEM workshop is on Tuesday, June 25.)
+
+**Planned next events** (details will follow)
+* REM/RHEM course at the _POLNET school_ 13-17 January 2025, Barcelona, Spain.
+* RHEM course at the _International "Winter Course," Theory, Methods and Applications of Personal Networks_, UAB Egolab, Barcelona, Spain. February 3-7, 2025.
 
 **Past training events** 
+* _REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)_, within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024.
 * _International "Winter Course," Theory, Methods and Applications of Personal Networks_, UAB Egolab, Barcelona, Spain. February 5-9, 2024.
 * _REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)_, within the _European Conference on Social Networks (EUSN 2023)_, Ljubljana, Slovenia. 4-8 September 2023.
 * _Relational Event Models (REMs) for the Analysis of Social Networks: A Hands-on Introduction_, part of the _NUSC Summer School in Network and Data Science_, Greenwich, UK. 19th - 23rd June 2023.
