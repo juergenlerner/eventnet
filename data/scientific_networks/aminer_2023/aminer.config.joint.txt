@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="aminer_config" version="1.1">
+  <input.files accept=".csv" has.header="true" delimiter="COMMA" quote.char="DOUBLEQUOTE">
+    <input.directory name="."/>
+    <file name="dblp_v14_preproc_Journal.csv"/>
+  </input.files>
+  <output.directory name="."/>
+  <event.components>
+    <component name="SOURCE" column.name="Source"/>
+    <component name="TARGET" column.name="Target"/>
+    <component name="TIME" column.name="Year"/>
+    <component name="TYPE" column.name="Type"/>
+    <component name="EVENT_INTERVAL_ID" column.name="EventID"/>
+  </event.components>
+  <network.mode is.multimode="true" number.of.modes="2">
+    <node.set index="0" name="authors"/>
+    <node.set index="1" name="papers"/>
+  </network.mode>
+  <event.types>
+    <type name="author" implied="false" admits.loops="false" source.node.set="authors" target.node.set="papers"/>
+    <type name="paper.ref.paper" implied="false" admits.loops="false" source.node.set="papers" target.node.set="papers"/>
+    <type name="author.ref.paper" implied="false" admits.loops="false" source.node.set="authors" target.node.set="papers"/>
+    <type name="author.ref.author" implied="false" admits.loops="true" source.node.set="authors" target.node.set="authors"/>
+    <type name="paper.ref.author" implied="false" admits.loops="false" source.node.set="papers" target.node.set="authors"/>
+   </event.types>
+  <time time.format.type="INTEGER" interval.type="TIME" time.unit="1" />
+  <attribute name="has.authored" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="author" direction="OUT"/>
+  </attribute>
+  <attribute name="author.publication.activity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author" direction="OUT"/>
+  </attribute>
+  <attribute name="author.citation.popularity" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="paper.ref.author" direction="IN"/>
+  </attribute>
+  <attribute name="num.refs.of.paper" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="paper.ref.paper" direction="OUT"/>
+  </attribute>
+  <attribute name="author.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author"/>
+  </attribute>
+  <attribute name="coauthor.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_DHE" description="" endpoint="SOURCE">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author"/>
+  </attribute>
+  <attribute name="author.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_DHE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author"/>
+  </attribute>
+  <attribute name="paper.ref.paper.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="paper.ref.paper"/>
+  </attribute>
+  <attribute name="author.ref.paper.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author.ref.paper"/>
+  </attribute>
+  <attribute name="author.ref.paper.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_DHE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author.ref.paper"/>
+  </attribute>
+  <attribute name="author.ref.author.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author.ref.author"/>
+  </attribute>
+  <attribute name="author.ref.author.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_DHE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author.ref.author"/>
+  </attribute>
+  <statistic name="source.size" type="DHE_SIZE_STAT" endpoint="SOURCE"/>
+  <statistic name="target.size" type="DHE_SIZE_STAT" endpoint="TARGET"/>
+  <statistic name="has.authored.avg" type="DHE_NODE_STAT" node.attr.name.1="has.authored" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="avg.author.publication.activity" type="DHE_NODE_STAT" node.attr.name.1="author.publication.activity" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="avg.author.publication.activity" type="DHE_NODE_STAT" node.attr.name.1="author.publication.activity" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="avg.author.citation.popularity" type="DHE_NODE_STAT" node.attr.name.1="author.citation.popularity" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="diff.author.citation.popularity" type="DHE_NODE_STAT" node.attr.name.1="author.citation.popularity" na.value="-1.0" endpoint="SOURCE">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="paper.outdegree.popularity" type="DHE_NODE_STAT" node.attr.name.1="num.refs.of.paper" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.sub.rep.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.hyed" source.size="1" target.size="0">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.sub.rep.2" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.hyed" source.size="2" target.size="0">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="collaborate.with.citing.author" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.ref.author.hyed" source.size="1" target.size="1" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="reference.sub.rep.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.ref.paper.hyed" source.size="0" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="reference.sub.rep.2" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.ref.paper.hyed" source.size="0" target.size="2">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="reference.sub.rep.3" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.ref.paper.hyed" source.size="0" target.size="3">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.ref.paper.sub.rep.1.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.ref.paper.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="cite.paper.and.its.references.1" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="paper.ref.paper.hyed" source.size="1" target.size="1" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.self.citation" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="author.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.closure.by.coauthor" type="DHE_CLOSURE_STAT" dyad.attr.name.1="coauthor.dyadic" direction.1="OUT" dyad.attr.name.2="coauthor.dyadic" direction.2="OUT" endpoint="SOURCE">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.closure.by.coref.to.paper" type="DHE_CLOSURE_STAT" dyad.attr.name.1="author.ref.paper.dyadic" direction.1="OUT" dyad.attr.name.2="author.ref.paper.dyadic" direction.2="OUT" endpoint="SOURCE">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.closure.by.coref.to.author" type="DHE_CLOSURE_STAT" dyad.attr.name.1="author.ref.author.dyadic" direction.1="OUT" dyad.attr.name.2="author.ref.author.dyadic" direction.2="OUT" endpoint="SOURCE">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.closure.by.coref.from.author" type="DHE_CLOSURE_STAT" dyad.attr.name.1="author.ref.author.dyadic" direction.1="IN" dyad.attr.name.2="author.ref.author.dyadic" direction.2="IN" endpoint="SOURCE">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.closure.by.transitive.coref.author" type="DHE_CLOSURE_STAT" dyad.attr.name.1="author.ref.author.dyadic" direction.1="OUT" dyad.attr.name.2="author.ref.author.dyadic" direction.2="IN" endpoint="SOURCE">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ref.ref.of.coauthor.closure" type="DHE_CLOSURE_STAT" dyad.attr.name.1="coauthor.dyadic" direction.1="OUT" dyad.attr.name.2="author.ref.paper.dyadic" direction.2="IN">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="cite.paper.of.coauthor" type="DHE_CLOSURE_STAT" dyad.attr.name.1="coauthor.dyadic" direction.1="OUT" dyad.attr.name.2="author.dyadic" direction.2="IN">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.citation.repetition" type="DHE_CLOSURE_STAT" dyad.attr.name.1="author.ref.author.dyadic" direction.1="OUT" dyad.attr.name.2="author.dyadic" direction.2="IN">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="author.citation.reciprocation" type="DHE_CLOSURE_STAT" dyad.attr.name.1="author.ref.author.dyadic" direction.1="IN" dyad.attr.name.2="author.dyadic" direction.2="IN">
+    <function.combine.parallel type="SUM"/>
+    <function.combine.serial type="MIN"/>
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <observation name="JOINT" type="COND_SIZE_DHE_OBS" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="1" non.events.are.per.observed.event="true">
+    <consider.event.type name="author.ref.paper"/>
+  </observation>
+</eventnet.configuration>
