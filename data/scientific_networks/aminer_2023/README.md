@@ -20,11 +20,11 @@ The generated CSV file (e.g. `dblp_v14_preproc_Journal.csv`) serves as input fil
 
 Explanatory variables ("hyperedge statistics") for various effects can be computed with eventnet.hyper as defined in the illustrating configuration file [`aminer.config.joint.txt`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer.config.joint.txt). To execute the processing from the command line, use the command
 ```
-java -Xmx250g -jar eventnet.hyper-0.5.jar aminer.config.joint.txt
+java -Xmx250g -jar eventnet.hyper-1.1.jar aminer.config.joint.txt
 ```
 To make this processing work it is best if the jar file, csv file, and the configuration file are all in the working directory from where the `java` command is executed. (Recall that there is [**Troubleshooting help page**](https://github.com/juergenlerner/eventnet/wiki/Troubleshooting-(help)).)
 
-Note that the configuration file linked above still needs to be processed with the [older versions of eventnet](https://github.com/juergenlerner/eventnet/tree/master/jars/old_versions-0.x), in particular with `eventnet.hyper-0.6.jar`. In the near future we will adapt this configuration file to the newer versions of eventnet (1.0 or later).
+An older configuration file for the [older versions of eventnet](https://github.com/juergenlerner/eventnet/tree/master/jars/old_versions-0.x), in particular for `eventnet.hyper-0.6.jar` is provided for reproducibility.
 
 Estimation of RHEM parameters with the `coxph()` function is illustrated in the R script [`aminer_model.R`](https://github.com/juergenlerner/eventnet/raw/master/data/scientific_networks/aminer_2023/aminer_model.R).
 
