@@ -41,9 +41,12 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 
-**Planned next events** (details will follow)
-* REM/RHEM course at the _POLNET school_ 13-17 January 2025, Barcelona, Spain.
-* RHEM course at the _International "Winter Course," Theory, Methods and Applications of Personal Networks_, UAB Egolab, Barcelona, Spain. February 3-7, 2025.
+**Next training events**
+* REM/RHEM course at the [**POLNET Winter School on Social Network Analysis**](https://ecpr.eu/Events/310), 13-17 January 2025. IBEI, Barcelona, Spain.
+* RHEM course at the [**International "Winter Course," Theory, Methods and Applications of Personal Networks**](https://webs.uab.cat/egolab/14th-personal-networks-course/), February 3-7, 2025. UAB Egolab, Barcelona, Spain.
+
+**Further planned events** (details will follow)
+* RHEM workshop at [Sunbelt 2025](https://sunbelt2025.org/), 23-29 June 2025. Paris, France.
 
 **Past training events** 
 * _REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)_, within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024.
