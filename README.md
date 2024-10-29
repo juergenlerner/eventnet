@@ -40,7 +40,7 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 * Lerner and Lomi (2020). [**Reliability of relational event model estimates under sampling: how to fit a relational event model to 360 million dyadic events.**](https://doi.org/10.1017/nws.2019.57) _Network Science_, 8(1):97-135. ([DOI: 10.1017/nws.2019.57](https://doi.org/10.1017/nws.2019.57))
 * Lerner and Lomi (2023). [**Relational hyperevent models for polyadic interaction networks**](https://doi.org/10.1093/jrsssa/qnac012). _Journal of the Royal Statistical Society: Series A_. ([https://doi.org/10.1093/jrsssa/qnac012](https://doi.org/10.1093/jrsssa/qnac012))
 
-## Tutorials and training 
+## Tutorials, forum, and training 
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
 
 Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) to discuss all questions, issues, or topics concerning the eventnet software, relational event models (REM), and relational hyperevent models (RHEM).
