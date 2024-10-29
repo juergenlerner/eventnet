@@ -9,6 +9,10 @@ See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventn
 
 ## News
 
+**+++ eventnet-users forum +++**
+
+Start of [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) to discuss all questions, issues, or topics concerning the eventnet software, relational event models (REM), and relational hyperevent models (RHEM).
+
 **+++ Release of eventnet one +++** 
 
 Eventnet one (Version 1.0 or later), latest release in [eventnet-1.1.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.1.jar), comes with three important changes.
@@ -38,6 +42,8 @@ Eventnet is distributed under the [GNU General Public License v3.0](https://gith
 
 ## Tutorials and training 
 **The usual place to get started are the online tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki).**
+
+Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) to discuss all questions, issues, or topics concerning the eventnet software, relational event models (REM), and relational hyperevent models (RHEM).
 
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 
