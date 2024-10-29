@@ -71,7 +71,7 @@ Moreover, training **workshops or courses** introducing eventnet are offered at 
 There is a [commented literature list](https://github.com/juergenlerner/eventnet/wiki/References-(list)) of own work on relational event models (REM) or relational hyperevent models (RHEM), using the eventnet software or (published or unpublished) predecessor software in its empirical analysis. The listed papers are expected to complement the eventnet tutorials in providing more formal details, a better embedding into related work, and a more thorough discussion of objectives and contributions. They may also point to further illustrating use cases of REM and RHEM.
 
 ## Contact
-[J&uuml;rgen Lerner](https://github.com/juergenlerner) [(juergen.lerner@gmail.com)](mailto:juergen.lerner@gmail.com)
+Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) to discuss all questions, issues, or topics concerning the eventnet software, relational event models (REM), and relational hyperevent models (RHEM).
 
 ## Funding
 We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2025: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
