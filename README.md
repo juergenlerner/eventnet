@@ -48,11 +48,11 @@ Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) t
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 
 **Next training events**
-* REM/RHEM course at the [**POLNET Winter School on Social Network Analysis**](https://ecpr.eu/Events/310), 13-17 January 2025. IBEI, Barcelona, Spain.
-* RHEM course at the [**International "Winter Course," Theory, Methods and Applications of Personal Networks**](https://webs.uab.cat/egolab/14th-personal-networks-course/), February 3-7, 2025. UAB Egolab, Barcelona, Spain.
 * The workshop **Extending the relational event model** by Ernst Wit, Alessandro Lomi, Jürgen Lerner, Martina Boschi, and Melania Lembo at the [INSNA Sunbelt 2025](https://sunbelt2025.org/), 23-29 June 2025 in Paris, France will teach several basic and advanced concepts on REM and RHEM, including non-linear effects, time-varying effects, polyadic interaction events (hyperevents), and methods to asses the goodness-of-fit.
 
 **Past training events** 
+* RHEM course at the _International "Winter Course," Theory, Methods and Applications of Personal Networks_ February 3-7, 2025. UAB Egolab, Barcelona, Spain.
+* REM/RHEM course at the _POLNET Winter School on Social Network Analysis_ 13-17 January 2025. IBEI, Barcelona, Spain.
 * _REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)_, within the _INSNA Sunbelt Conference 2024_, Edinburgh. 24-30 June 2024.
 * _International "Winter Course," Theory, Methods and Applications of Personal Networks_, UAB Egolab, Barcelona, Spain. February 5-9, 2024.
 * _REM beyond dyads: relational hyperevent modeling with eventnet (beginners and advanced)_, within the _European Conference on Social Networks (EUSN 2023)_, Ljubljana, Slovenia. 4-8 September 2023.
