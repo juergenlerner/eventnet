@@ -73,3 +73,5 @@ Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) t
 
 ## Funding
 We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2025: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
+
+We are happy to announce that further development of eventnet will continue, funded by [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **555455503**. From 2026 to 2028: "_Statistical network analysis of time-ordered social interaction events with internal structure_" (LE 2237/4-1).
