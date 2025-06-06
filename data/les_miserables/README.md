@@ -18,4 +18,4 @@ defining the set of actors that could appear in chapters ("risk set") and 28 dum
 ```
 defining which of the actors are female. (This information is based on the actor names and short descriptions given in `jean.dat`, as well as on our own reading of the novel.)
 
-If you use this data in a publication, please cite the original data source: Knuth, D. E. (1993). The Stanford GraphBase: a platform for combinatorial computing (Vol. 1). New York: AcM Press.
+If you use this data in a publication, please cite the original data source: Knuth, D. E. (1993). The Stanford GraphBase: a platform for combinatorial computing (Vol. 1). New York: ACM Press.
