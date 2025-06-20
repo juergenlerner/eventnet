@@ -5,7 +5,7 @@ The file [`jean_events.csv`](https://github.com/juergenlerner/eventnet/raw/maste
 "1.1.1","NP","chapter"
 "1.1.1","MB","chapter"
 ```
-The events of type `chapter`, linking the chapter index (e.g., `1.1.1`) to the actors appearing in the chapter (e.g., `MY`), are the actual hyperevents that are to be modeled. These hyperevents are preceeded in the file by 80 dummy events of type `add.actor`, such as the following:
+The events of type `chapter`, linking the chapter index (e.g., `1.1.1`) to the actors appearing in the chapter (e.g., `MY`), are the actual hyperevents that are to be modeled. These hyperevents are preceded in the file by 80 dummy events of type `add.actor`, such as the following:
 ```
 "dummy","BS","add.actor"
 "dummy","HL","add.actor"
@@ -18,4 +18,4 @@ defining the set of actors that could appear in chapters ("risk set") and 28 dum
 ```
 defining which of the actors are female. (This information is based on the actor names and short descriptions given in `jean.dat`, as well as on our own reading of the novel.)
 
-If you use this data in a publication, please cite the original data source: Knuth, D. E. (1993). The Stanford GraphBase: a platform for combinatorial computing (Vol. 1). New York: ACM Press.
+If you use this data in a publication, please also cite the original data source: Knuth, D. E. (1993). The Stanford GraphBase: a platform for combinatorial computing (Vol. 1). New York: ACM Press.
