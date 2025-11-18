@@ -24,3 +24,11 @@ MY Monsieur Charles Fran\c{c}ois Bienvenu Myriel, Bishop of D--
 ```
 
 If you use this data in a publication, please also cite the original data source: Knuth, D. E. (1993). The Stanford GraphBase: a platform for combinatorial computing (Vol. 1). New York: ACM Press.
+
+The file [`jean_config.txt`](https://github.com/juergenlerner/eventnet/raw/master/data/les_miserables/jean_config.txt) is an eventnet configuration file to compute hyperedge statistics based on the given `csv` table. The configuration file can be executed either by loading it in the eventnet GUI, and execute from there, or via the command
+```
+java -Xmx4g -jar eventnet-1.3.jar jean_config.txt
+```
+(possibly adapt version numbers and/or memory size) assuming that the `.jar` file, the `.csv` file, and the configuration file are all in the current directory.
+
+The file [`jean_model.R`](https://github.com/juergenlerner/eventnet/raw/master/data/les_miserables/jean_model.R) is a short R code file demonstrating how to estimate RHEM parameters with the `coxph` function in the `survival` package.
