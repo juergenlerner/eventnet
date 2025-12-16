@@ -48,9 +48,11 @@ Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) t
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 
 **Next training events**
-* Courses _Relational event models and their extensions_ and _Data Workshop: REM/RHEM case studies_ at the [**5th Summer School in Social Statistics**](https://v0-summer-school-of-soc-stats.vercel.app/), September 28 to October 2, 2025 in Gorizia, Italy.
+* Course _Modeling alter nominations with RHEM_ at the [**International "Winter Course," Theory, Methods and Applications of Personal Networks**](https://webs.uab.cat/egolab/15th-personal-networks-course/) February 2-6, 2026. UAB Egolab, Barcelona, Spain.
+* Workshop _All You Need to Know about Relational Hyper-event Modeling_ (by Martina Boschi and Melania Lembo) and lecture _What and Whom Do We Cite? Relational Hyperevent Models for Citation Networks_ at the [**SUPSI Winter School in Network Data Science and Artificial Intelligence**](https://www.supsi.ch/en/winter-school-in-network-data-science-and-artificial-intelligence) February 9-13, 2026. USI Lugano, Switzerland
 
 **Past training events** 
+* Courses _Relational event models and their extensions_ and _Data Workshop: REM/RHEM case studies_ at the **5th Summer School in Social Statistics**, September 28 to October 2, 2025 in Gorizia, Italy.
 * The workshop **Extending the relational event model** by Ernst Wit, Alessandro Lomi, Jürgen Lerner, Martina Boschi, and Melania Lembo at the _INSNA Sunbelt 2025_, 23-29 June 2025 in Paris, France teaches several basic and advanced concepts on REM and RHEM, including non-linear effects, time-varying effects, polyadic interaction events (hyperevents), and methods to asses the goodness-of-fit.
 * RHEM course at the _International "Winter Course," Theory, Methods and Applications of Personal Networks_ February 3-7, 2025. UAB Egolab, Barcelona, Spain.
 * REM/RHEM course at the _POLNET Winter School on Social Network Analysis_ 13-17 January 2025. IBEI, Barcelona, Spain.
