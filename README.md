@@ -75,6 +75,6 @@ There is a [commented literature list](https://github.com/juergenlerner/eventnet
 Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) to discuss all questions, issues, or topics concerning the eventnet software, relational event models (REM), and relational hyperevent models (RHEM).
 
 ## Funding
-We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2025: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
+We acknowledge financial support from [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **555455503**. From 2026 to 2028: "_Statistical network analysis of time-ordered social interaction events with internal structure_" (LE 2237/4-1).
 
-We are happy to announce that further development of eventnet will continue, funded by [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **555455503**. From 2026 to 2028: "_Statistical network analysis of time-ordered social interaction events with internal structure_" (LE 2237/4-1).
+Previously the project was also supported by [Deutsche Forschungsgemeinschaft (DFG)](http://www.dfg.de/en/) under Project No. **321869138**. From 2017 to 2020: "_Statistical analysis of structural balance in signed social networks_" (LE 2237/2-1) and from 2021 to 2025: "_Statistical analysis of time-stamped multi-actor events in social networks_" (LE 2237/2-2).
