@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="ghe.example.config" version="2.0-pre-2">
+  <input.files accept=".csv" has.header="true" delimiter="COMMA" quote.char="DOUBLEQUOTE">
+    <input.directory name="."/>
+    <file name="ghe_publications.csv"/>
+  </input.files>
+  <output.directory name="."/>
+  <event.components>
+    <component name="SOURCE" column.name="source"/>
+    <component name="TARGET" column.name="target"/>
+    <component name="TIME" column.name="time"/>
+    <component name="TYPE" column.name="type"/>
+    <component name="EVENT_INTERVAL_ID" column.name="event.id"/>
+    <component name="PARENT_EVENT_ID" column.name="parent.id"/>
+  </event.components>
+  <network.mode is.multimode="true" number.of.modes="3">
+    <node.set index="0" name="papers"/>
+    <node.set index="1" name="scientists"/>
+    <node.set index="2" name="keywords"/>
+  </network.mode>
+  <event.types>
+    <type name="reference" implied="false" admits.loops="false" source.node.set="papers" target.node.set="papers"/>
+    <type name="editor" implied="false" admits.loops="false" source.node.set="papers" target.node.set="scientists"/>
+    <type name="keyword" implied="false" admits.loops="false" source.node.set="papers" target.node.set="keywords"/>
+    <type name="author" implied="false" admits.loops="false" source.node.set="papers" target.node.set="scientists"/>
+    <type name="publication" implied="false" admits.loops="true" source.node.set="papers" target.node.set="papers"/>
+  </event.types>
+  <generalized.event.types>
+    <gen.type name="publication">
+      <inner.type name="publication" source.position="published.paper" target.position="published.paper"/>
+      <inner.type name="author" source.position="published.paper" target.position="author"/>
+      <inner.type name="reference" source.position="published.paper" target.position="cited.paper"/>
+      <inner.type name="editor" source.position="published.paper" target.position="editor"/>
+      <inner.type name="keyword" source.position="published.paper" target.position="keyword"/>
+      <disjoint position.1="cited.paper" position.2="published.paper"/>
+      <disjoint position.1="author" position.2="editor"/>
+    </gen.type>
+  </generalized.event.types>
+  <time time.format.type="INTEGER" interval.type="TIME" time.unit="1"/>
+  <attribute name="prev.publications" class="GEN_HYPER_LEVEL" type="DEFAULT_GHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="publication"/>
+  </attribute>
+  <attribute name="prior.papers.of.author" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="author" direction="IN"/>
+  </attribute>
+  <statistic name="author_cocitation_repetition" type="GHE_SUB_REPETITION_STAT" hyperedge.attr.name.1="prev.publications">
+    <position.size position="cited.paper" hyperedge.size="2"/>
+    <position.size position="author" hyperedge.size="1"/>
+    <aggregation.function type="SUM"/>
+  </statistic>
+  <statistic name="author_keyword_reference_repetition" type="GHE_SUB_REPETITION_STAT" hyperedge.attr.name.1="prev.publications">
+    <position.size position="cited.paper" hyperedge.size="1"/>
+    <position.size position="author" hyperedge.size="1"/>
+    <position.size position="keyword" hyperedge.size="1"/>
+    <aggregation.function type="SUM"/>
+  </statistic>
+  <statistic name="cite_paper_of_editor" type="GHE_SUB_REPETITION_STAT" hyperedge.attr.name.1="prev.publications">
+    <position.size position="editor" hyperedge.size="1"/>
+    <position.size position="cited.paper" hyperedge.size="1"/>
+    <role.shuffle position.1="editor" position.2="author"/>
+    <role.shuffle position.1="cited.paper" position.2="published.paper"/>
+    <aggregation.function type="SUM"/>
+  </statistic>
+  <statistic name="dhe_avg_papers_of_source" type="DHE_NODE_STAT" node.attr.name.1="prior.papers.of.author" na.value="-1.7976931348623157E308" endpoint="SOURCE">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="avg_num_papers_of_author" type="GHE_STAT_BY_DHE_STAT" source.position="author" other.stat.name="dhe_avg_papers_of_source"/>
+  <observation name="GHEVENTS" type="DEFAULT_GHE_OBS" apply.case.control.sampling="true" number.of.non.events="1" non.events.are.per.observed.event="true">
+    <consider.event.type name="publication"/>
+    <condition.on position="editor"/>
+    <condition.on position="published.paper"/>
+    <condition.on.size.of position="cited.paper"/>
+    <condition.on.size.of position="author"/>
+    <condition.on.size.of position="keyword"/>
+  </observation>
+</eventnet.configuration>
