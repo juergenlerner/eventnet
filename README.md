@@ -48,9 +48,10 @@ Use the [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) t
 Moreover, training **workshops or courses** introducing eventnet are offered at the following conferences or summerschools.
 
 **Next training events**
-* Workshops _Introduction to Relational Event Models_ and _All You Need to Know about Relational Hyper-event Modeling_ (by Martina Boschi and Melania Lembo) at the [**Sunbelt Social Networks Conference**](https://www.insna.org/events/sunbelt-2026---daytona-beach), June 22-28, 2026. Daytona Beach, FL.
+* Course on _relational event models (REM)_ at the [**POLNET Method School on Social Network Analysis**](https://ecpr.eu/Events/357) 21-25 September 2026. University of Konstanz, Germany.
 
 **Past training events** 
+* Workshops _Introduction to Relational Event Models_ and _All You Need to Know about Relational Hyper-event Modeling_ (by Martina Boschi and Melania Lembo) at the **Sunbelt Social Networks Conference**, June 22-28, 2026. Daytona Beach, FL.
 * Course _Modeling alter nominations with RHEM_ at the **International "Winter Course," Theory, Methods and Applications of Personal Networks** February 2-6, 2026. UAB Egolab, Barcelona, Spain.
 * Workshop _All You Need to Know about Relational Hyper-event Modeling_ (by Martina Boschi and Melania Lembo) and lecture _What and Whom Do We Cite? Relational Hyperevent Models for Citation Networks_ at the **SUPSI Winter School in Network Data Science and Artificial Intelligence** February 9-13, 2026. USI Lugano, Switzerland
 * Courses _Relational event models and their extensions_ and _Data Workshop: REM/RHEM case studies_ at the **5th Summer School in Social Statistics**, September 28 to October 2, 2025 in Gorizia, Italy.
