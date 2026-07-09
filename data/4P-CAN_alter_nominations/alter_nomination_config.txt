@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<eventnet.configuration name="4P-CAN.config" version="2.0-pre-1">
+  <input.files accept=".csv" has.header="true" delimiter="COMMA" quote.char="DOUBLEQUOTE">
+    <input.directory name="."/>
+    <file name="events.csv"/>
+  </input.files>
+  <output.directory name="."/>
+  <event.components>
+    <component name="SOURCE" column.name="source"/>
+    <component name="TARGET" column.name="target"/>
+    <component name="TIME" column.name="time"/>
+    <component name="TYPE" column.name="type"/>
+    <component name="WEIGHT" column.name="weight"/>
+    <component name="EVENT_INTERVAL_ID" column.name="e.id"/>
+  </event.components>
+  <network.mode is.multimode="false"/>
+  <event.types>
+    <type name="alter_nomination" implied="false" admits.loops="false"/>
+    <type name="edu.w1" implied="false" admits.loops="true"/>
+    <type name="procfood" implied="false" admits.loops="true"/>
+    <type name="edu.w2" implied="false" admits.loops="true"/>
+    <type name="edu.w3" implied="false" admits.loops="true"/>
+    <type name="link_tracing" implied="false" admits.loops="false"/>
+    <type name="edu.w4" implied="false" admits.loops="true"/>
+    <type name="is.ego.w4" implied="false" admits.loops="true"/>
+    <type name="is.ego.w3" implied="false" admits.loops="true"/>
+    <type name="is.ego.w2" implied="false" admits.loops="true"/>
+    <type name="is.ego.w1" implied="false" admits.loops="true"/>
+    <type name="smoking.w1" implied="false" admits.loops="true"/>
+    <type name="aatie" implied="false" admits.loops="false"/>
+    <type name="smoking.w2" implied="false" admits.loops="true"/>
+    <type name="smoking.w3" implied="false" admits.loops="true"/>
+    <type name="smoking.w4" implied="false" admits.loops="true"/>
+    <type name="household" implied="false" admits.loops="true"/>
+    <type name="female" implied="false" admits.loops="true"/>
+    <type name="family" implied="false" admits.loops="true"/>
+    <type name="event" implied="false" admits.loops="true"/>
+    <type name="age" implied="false" admits.loops="true"/>
+    <type name="bmi" implied="false" admits.loops="true"/>
+  </event.types>
+  <time time.format.type="INTEGER" interval.type="TIME" time.unit="5"/>
+  <attribute name="at.risk" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="female" direction="OUT">
+      <function type="CONSTANT" parameter="1.0"/>
+    </event.response>
+  </attribute>
+  <attribute name="female" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="female" direction="OUT"/>
+  </attribute>
+  <attribute name="age" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="age" direction="OUT"/>
+  </attribute>
+  <attribute name="bmi" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="bmi" direction="OUT"/>
+  </attribute>
+  <attribute name="procfood" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="procfood" direction="OUT"/>
+  </attribute>
+  <attribute name="ego.count" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="is.ego.w1" direction="OUT"/>
+    <event.response event.type="is.ego.w2" direction="OUT"/>
+    <event.response event.type="is.ego.w3" direction="OUT"/>
+    <event.response event.type="is.ego.w4" direction="OUT"/>
+  </attribute>
+  <attribute name="edu" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="edu.w1" direction="OUT"/>
+    <event.response event.type="edu.w2" direction="OUT"/>
+    <event.response event.type="edu.w3" direction="OUT"/>
+    <event.response event.type="edu.w4" direction="OUT"/>
+  </attribute>
+  <attribute name="smoking" class="NODE_LEVEL" type="DEFAULT_NODE_LEVEL_ATTRIBUTE" description="">
+    <attr.update type="SET_VALUE_TO"/>
+    <event.response event.type="smoking.w1" direction="OUT"/>
+    <event.response event.type="smoking.w2" direction="OUT"/>
+    <event.response event.type="smoking.w3" direction="OUT"/>
+    <event.response event.type="smoking.w4" direction="OUT"/>
+  </attribute>
+  <attribute name="ego.network.dir.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="alter_nomination"/>
+  </attribute>
+  <attribute name="a.a.ties" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="aatie"/>
+  </attribute>
+  <attribute name="a.a.ties.dir" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="aatie"/>
+  </attribute>
+  <attribute name="link.tracing.hyed" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="link_tracing"/>
+  </attribute>
+  <attribute name="link.tracing.dir.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="link_tracing"/>
+  </attribute>
+  <attribute name="household.hyed" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="household"/>
+  </attribute>
+  <attribute name="household.dir.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="household"/>
+  </attribute>
+  <attribute name="event.hyed" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="event"/>
+  </attribute>
+  <attribute name="event.dir.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="event"/>
+  </attribute>
+  <attribute name="family.hyed" class="UNDIR_HYPER_LEVEL" type="DEFAULT_UHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="family"/>
+  </attribute>
+  <attribute name="family.dir.hyed" class="DIR_HYPER_LEVEL" type="DEFAULT_DHE_ATTRIBUTE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="family"/>
+  </attribute>
+  <attribute name="conominated.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_DHE" description="" endpoint="TARGET">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="alter_nomination"/>
+  </attribute>
+  <attribute name="comember.dyadic" class="DYAD_LEVEL" type="DYAD_LEVEL_ATTRIBUTE_FROM_UHE" description="">
+    <attr.update type="INCREMENT_VALUE_BY"/>
+    <event.response event.type="alter_nomination"/>
+  </attribute>
+  <statistic name="num.alters" type="DHE_SIZE_STAT" endpoint="TARGET"/>
+  <statistic name="female" type="DHE_NODE_STAT" node.attr.name.1="female" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.diff.female" type="DHE_NODE_STAT" node.attr.name.1="female" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="alter.alter.diff.female" type="DHE_NODE_STAT" node.attr.name.1="female" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="age" type="DHE_NODE_STAT" node.attr.name.1="age" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.diff.age" type="DHE_NODE_STAT" node.attr.name.1="age" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="alter.alter.diff.age" type="DHE_NODE_STAT" node.attr.name.1="age" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="bmi" type="DHE_NODE_STAT" node.attr.name.1="bmi" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.diff.bmi" type="DHE_NODE_STAT" node.attr.name.1="bmi" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="alter.alter.diff.bmi" type="DHE_NODE_STAT" node.attr.name.1="bmi" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="procfood" type="DHE_NODE_STAT" node.attr.name.1="procfood" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.diff.procfood" type="DHE_NODE_STAT" node.attr.name.1="procfood" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="alter.alter.diff.procfood" type="DHE_NODE_STAT" node.attr.name.1="procfood" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="edu" type="DHE_NODE_STAT" node.attr.name.1="edu" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.diff.edu" type="DHE_NODE_STAT" node.attr.name.1="edu" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="alter.alter.diff.edu" type="DHE_NODE_STAT" node.attr.name.1="edu" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="smoking" type="DHE_NODE_STAT" node.attr.name.1="smoking" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.diff.smoking" type="DHE_NODE_STAT" node.attr.name.1="smoking" na.value="-1.0">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="alter.alter.diff.smoking" type="DHE_NODE_STAT" node.attr.name.1="smoking" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="ABSDIFF"/>
+  </statistic>
+  <statistic name="nominate.egos" type="DHE_NODE_STAT" node.attr.name.1="ego.count" na.value="-1.0" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="times.nominated" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="ego.network.dir.hyed" source.size="0" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="times.pairs.conominated" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="ego.network.dir.hyed" source.size="0" target.size="2">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="times.triples.conominated" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="ego.network.dir.hyed" source.size="0" target.size="3">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="nomination.repetition" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="ego.network.dir.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="alter.alter.aatie" type="DHE_SUB_REPETITION_STAT" direction.1="SYM" hyperedge.attr.name.1="a.a.ties" source.size="0" target.size="2" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.aatie.forward" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="a.a.ties.dir" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.aatie.backward" type="DHE_SUB_REPETITION_STAT" direction.1="IN" hyperedge.attr.name.1="a.a.ties.dir" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="alter.alter.link.tracing" type="DHE_SUB_REPETITION_STAT" direction.1="SYM" hyperedge.attr.name.1="link.tracing.hyed" source.size="0" target.size="2" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.link.tracing.forward" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="link.tracing.dir.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.link.tracing.backward" type="DHE_SUB_REPETITION_STAT" direction.1="IN" hyperedge.attr.name.1="link.tracing.dir.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="alter.alter.household" type="DHE_SUB_REPETITION_STAT" direction.1="SYM" hyperedge.attr.name.1="household.hyed" source.size="0" target.size="2" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.household" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="household.dir.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="alter.alter.event.coparticipation" type="DHE_SUB_REPETITION_STAT" direction.1="SYM" hyperedge.attr.name.1="event.hyed" source.size="0" target.size="2" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.event.coparticipation" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="event.dir.hyed" source.size="1" target.size="1">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="alter.alter.family" type="DHE_SUB_REPETITION_STAT" direction.1="SYM" hyperedge.attr.name.1="family.hyed" source.size="0" target.size="2" endpoint="TARGET">
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <statistic name="ego.alter.family" type="DHE_SUB_REPETITION_STAT" direction.1="OUT" hyperedge.attr.name.1="family.dir.hyed" source.size="1" target.size="1" >
+    <aggregation.function type="AVERAGE"/>
+  </statistic>
+  <observation name="ALTER_NOM" type="COND_SIZE_DHE_OBS" exclude.loops="true" apply.case.control.sampling="true" number.of.non.events="5000" non.events.are.per.observed.event="true" target.is.non.zero.on.attr="at.risk" condition.on.source="true">
+    <consider.event.type name="alter_nomination"/>
+  </observation>
+</eventnet.configuration>
