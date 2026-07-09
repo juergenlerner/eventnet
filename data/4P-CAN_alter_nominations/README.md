@@ -1,0 +1,1 @@
+The [4P-CAN Project](https://4p-can.eu/) is an EU HORIZON funded project conducting personalized cancer primary prevention research through citizen participation. Among others respondents' personal networks have been collected. The configuration file and R script linked below specify and estimate RHEM explaining alter-nominations. 
