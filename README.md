@@ -9,21 +9,16 @@ See the tutorials in the [eventnet wiki](https://github.com/juergenlerner/eventn
 
 ## News
 
+**+++ Release of eventnet two +++** 
+
+Eventnet two (Version 2.0 or later), latest release in [eventnet-2.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-2.0.jar), introduces effects for **generalized hyperevents** which are time-stamped hyperedges that decompose into any number of sub-hyperedges, comprising the nodes that occupy a certain event position. An example is given by the publication event of a scientific paper that binds several types of nodes in various positions: the authors of the paper, the cited references, its keywords, the journal in which it is published, and possibly further types of nodes connected to a published paper. It is plausible that some or all of these positions interact. For example, the references are selected by the authors, but their choice might also be dependent on the paper's keywords, or its journal. See the [GRHEM first steps tutorial](https://github.com/juergenlerner/eventnet/wiki/GRHEM-first-steps-(tutorial)) to get started.
+
 **+++ eventnet-users forum +++**
 
 Start of [**eventnet-users forum**](https://groups.google.com/g/eventnet-users) to discuss all questions, issues, or topics concerning the eventnet software, relational event models (REM), and relational hyperevent models (RHEM).
 
-**+++ Release of eventnet one +++** 
-
-Eventnet one (Version 1.0 or later), latest release in [eventnet-1.3.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.3.jar), comes with three important changes.
-* The functionality for dyadic relational event models (REM) and for relational hyperevent models (RHEM) is now provided in a single JAR file (`eventnet-1.0.jar` or later).
-* RHEM can now also be specified purely in the graphical user interface (GUI).
-* RHEM effects have been completely reorganized. The number of different core types of RHEM statistics could be reduced but a more efficent use of the arguments of statistics actually provides a much larger variation of possible RHEM effects than in prior versions. Note that because of this reorganization, configuration files from versions prior to 1.0 will most likely no longer work with eventnet one. (Note, however, that the JAR files of prior versions are still available at [https://github.com/juergenlerner/eventnet/tree/master/jars/old_versions-0.x](https://github.com/juergenlerner/eventnet/tree/master/jars/old_versions-0.x).)
-
-RHEM effects available in Version 1.0 or later are exhaustively listed and discussed in the [Reference guide on RHEM effects](https://github.com/juergenlerner/eventnet/wiki/RHEM-effects-(reference-guide)). However, users new to eventnet are recommended to first have a look at the more basic tutorials linked from the [eventnet wiki](https://github.com/juergenlerner/eventnet/wiki/).
-
 ## Download and use (eventnet for REM and RHEM)
-To use eventnet, download the file [eventnet-1.3.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.3.jar) and start the program by either of:
+To use eventnet, download the file [eventnet-2.0.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-2.0.jar) and start the program by either of:
 * double-clicking on the JAR file opens the eventnet graphical user interface (GUI)
 * typing the command `java -jar eventnet-x.y.jar` opens the eventnet GUI
 * typing the command `java -jar eventnet-x.y.jar <configuration_filename.xml>`, where `<configuration_filename.xml>` is the name of a file containing a fully specified eventnet configuration, executes this configuration without opening the GUI.
@@ -32,7 +27,7 @@ To use eventnet, download the file [eventnet-1.3.jar](https://github.com/juergen
 
 Eventnet is written in java and needs the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java runtime environment (JRE)</a>, Java 8 (JRE version 1.8) or higher. An alternative to the JRE by Oracle is the [Eclipse Temurin JRE](https://adoptium.net/temurin/releases/).
 
-**Source code** (`.java` files) are in [eventnet-1.3-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-1.3-src.jar).
+**Source code** (`.java` files) are in [eventnet-2.0-src.jar](https://github.com/juergenlerner/eventnet/raw/master/jars/eventnet-2.0-src.jar).
 
 Eventnet is distributed under the [GNU General Public License v3.0](https://github.com/juergenlerner/eventnet/blob/master/LICENSE).
 
